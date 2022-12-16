@@ -1,0 +1,480 @@
+{
+  "1": {
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65071,
+        "neighbors": {
+          "0": {
+            "asn": 65069,
+            "ipv6": "2001:6373:7d::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:33c3:21::/61"
+      },
+      "kvstoreParams": {
+        "e2e-aggr-url": "tcp://[2001:54ae:63::]:8002",
+        "e2e-ctrl-url": "tcp://[2001:54ae:63::]:7007",
+        "e2e-network-prefix": "2001:33c3:21::/61,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:6373:7d::",
+        "POP_ADDR": "2001:b115:06::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:beba:45::"
+      }
+    }
+  },
+  "2": {},
+  "3": {},
+  "4": {},
+  "5": {},
+  "6": {},
+  "7": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "puma14.benchtop",
+            "mac_addr": "fa:ce:b0:53:b5:31",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:f6:5b:16",
+              "fa:ce:b0:de:dd:87"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA14"
+          },
+          {
+            "name": "puma15.benchtop",
+            "mac_addr": "fa:ce:b0:89:66:f1",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a9:11:e2",
+              "fa:ce:b0:1c:27:1d",
+              "fa:ce:b0:fa:b0:07"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA15"
+          },
+          {
+            "name": "puma34.benchtop",
+            "mac_addr": "fa:ce:b0:ec:31:d4",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:d5:ba:38",
+              "fa:ce:b0:cc:61:25",
+              "fa:ce:b0:9e:23:a2"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA34"
+          },
+          {
+            "name": "puma37.benchtop",
+            "mac_addr": "fa:ce:b0:55:ee:ab",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a7:61:e2",
+              "fa:ce:b0:34:5c:3f"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA37"
+          },
+          {
+            "name": "puma38.benchtop",
+            "mac_addr": "fa:ce:b0:52:6b:c5",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:37:c9:02",
+              "fa:ce:b0:99:70:88"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA38"
+          },
+          {
+            "name": "puma39.benchtop",
+            "mac_addr": "fa:ce:b0:e4:c9:b3",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a7:61:84",
+              "fa:ce:b0:e4:66:24"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "PUMA39"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-puma15.benchtop-puma34.benchtop",
+            "a_node_mac": "fa:ce:b0:1c:27:1d",
+            "a_node_name": "puma15.benchtop",
+            "z_node_mac": "fa:ce:b0:d5:ba:38",
+            "z_node_name": "puma34.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma34.benchtop-puma37.benchtop",
+            "a_node_mac": "fa:ce:b0:cc:61:25",
+            "a_node_name": "puma34.benchtop",
+            "z_node_mac": "fa:ce:b0:34:5c:3f",
+            "z_node_name": "puma37.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma34.benchtop-puma38.benchtop",
+            "a_node_mac": "fa:ce:b0:9e:23:a2",
+            "a_node_name": "puma34.benchtop",
+            "z_node_mac": "fa:ce:b0:99:70:88",
+            "z_node_name": "puma38.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma14.benchtop-puma37.benchtop",
+            "a_node_mac": "fa:ce:b0:f6:5b:16",
+            "a_node_name": "puma14.benchtop",
+            "z_node_mac": "fa:ce:b0:a7:61:e2",
+            "z_node_name": "puma37.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma14.benchtop-puma15.benchtop",
+            "a_node_mac": "fa:ce:b0:de:dd:87",
+            "a_node_name": "puma14.benchtop",
+            "z_node_mac": "fa:ce:b0:fa:b0:07",
+            "z_node_name": "puma15.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma15.benchtop-puma39.benchtop",
+            "a_node_mac": "fa:ce:b0:a9:11:e2",
+            "a_node_name": "puma15.benchtop",
+            "z_node_mac": "fa:ce:b0:e4:66:24",
+            "z_node_name": "puma39.benchtop",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma38.benchtop-puma39.benchtop",
+            "a_node_mac": "fa:ce:b0:37:c9:02",
+            "a_node_name": "puma38.benchtop",
+            "z_node_mac": "fa:ce:b0:a7:61:84",
+            "z_node_name": "puma39.benchtop",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 0,
+              "latitude": 37.48511848429827,
+              "longitude": -122.14826937376283
+            },
+            "name": "PUMA14"
+          },
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 0,
+              "latitude": 37.48511848429827,
+              "longitude": -122.14769682318162
+            },
+            "name": "PUMA15"
+          },
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 0,
+              "latitude": 37.48477917089751,
+              "longitude": -122.14769682318162
+            },
+            "name": "PUMA34"
+          },
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 0,
+              "latitude": 37.48477917089751,
+              "longitude": -122.14826937376283
+            },
+            "name": "PUMA37"
+          },
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 10.76,
+              "latitude": 37.48477917089751,
+              "longitude": -122.14716370356186
+            },
+            "name": "PUMA38"
+          },
+          {
+            "location": {
+              "accuracy": 0,
+              "altitude": 14.15,
+              "latitude": 37.48511848429827,
+              "longitude": -122.14716370356186
+            },
+            "name": "PUMA39"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "puma14.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:fa:b0:07": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:a7:61:e2": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:de:dd:87": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:f6:5b:16": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "puma15.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:d5:ba:38": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:de:dd:87": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:e4:66:24": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a9:11:e2": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:1c:27:1d": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:fa:b0:07": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "puma34.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:1c:27:1d": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:34:5c:3f": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:99:70:88": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:d5:ba:38": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:9e:23:a2": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:cc:61:25": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "puma37.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:cc:61:25": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:f6:5b:16": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:34:5c:3f": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:a7:61:e2": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "puma38.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:9e:23:a2": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:a7:61:84": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:37:c9:02": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:99:70:88": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "puma39.benchtop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:a9:11:e2": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:37:c9:02": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a7:61:84": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:e4:66:24": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:33c3:21::/61"
+          }
+        },
+        "node_config_overrides": {
+          "puma39.benchtop": {
+            "bgpParams": {
+              "localAsn": 65071,
+              "neighbors": {
+                "0": {
+                  "asn": 65069,
+                  "ipv6": "2001:6373:7d::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:33c3:21::/61"
+            },
+            "kvstoreParams": {
+              "e2e-aggr-url": "tcp://[2001:54ae:63::]:8002",
+              "e2e-ctrl-url": "tcp://[2001:54ae:63::]:7007",
+              "e2e-network-prefix": "2001:33c3:21::/61,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:6373:7d::",
+              "POP_ADDR": "2001:b115:06::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:beba:45::"
+            }
+          }
+        }
+      }
+    }
+  }
+}

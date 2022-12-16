@@ -1,0 +1,403 @@
+{
+  "1": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:d983:ad::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:49dd:ec::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:c14e:5b::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65517,
+        "neighbors": {
+          "0": {
+            "asn": 65075,
+            "ipv6": "2001:49dd:ec::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:29d1:f7::/60,22::/64,33::/64,44::/64,55::/64"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:29d1:f7::/60,64",
+        "e2e-ctrl-url": "tcp://[2001:5f6a:62::]:7007"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "22::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "33::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "44::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "55::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    }
+  },
+  "6": {
+    "traffic_gen": {
+      "server_id": 6,
+      "client_id": 7
+    },
+    "port_name": "eth4"
+  },
+  "7": {
+    "traffic_gen": {
+      "server_id": 7,
+      "client_id": 6
+    },
+    "port_name": "eth1"
+  },
+  "11": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "Star-2B-Pop",
+            "mac_addr": "fa:ce:b0:15:5a:c0",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:68:26:ff",
+              "fa:ce:b0:59:29:24",
+              "fa:ce:b0:1f:46:1a",
+              "fa:ce:b0:b9:97:18"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "SITE_2B"
+          },
+          {
+            "name": "Star-2A",
+            "mac_addr": "fa:ce:b0:67:7d:ad",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:3a:bc:34",
+              "fa:ce:b0:ca:b2:5e",
+              "fa:ce:b0:2c:d5:8c",
+              "fa:ce:b0:06:4a:b9"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2A"
+          },
+          {
+            "name": "Star-2C",
+            "mac_addr": "fa:ce:b0:9d:97:67",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:36:cb:ce",
+              "fa:ce:b0:5e:68:98",
+              "fa:ce:b0:60:b1:f8",
+              "fa:ce:b0:29:bc:5e"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2C"
+          },
+          {
+            "name": "Star-2D",
+            "mac_addr": "fa:ce:b0:d5:94:52",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:47:04:c2",
+              "fa:ce:b0:40:36:07",
+              "fa:ce:b0:d5:59:e3",
+              "fa:ce:b0:3b:a0:e4"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2D"
+          },
+          {
+            "name": "Star-2F",
+            "mac_addr": "fa:ce:b0:22:96:8a",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:95:7c:69",
+              "fa:ce:b0:c3:3d:95",
+              "fa:ce:b0:67:ae:53",
+              "fa:ce:b0:6c:58:3e"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2F"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-Star-2A-Star-2B-Pop",
+            "a_node_mac": "fa:ce:b0:3a:bc:34",
+            "a_node_name": "Star-2A",
+            "z_node_mac": "fa:ce:b0:b9:97:18",
+            "z_node_name": "Star-2B-Pop",
+            "link_type": 1
+          },
+          {
+            "name": "link-Star-2B-Pop-Star-2C",
+            "a_node_mac": "fa:ce:b0:59:29:24",
+            "a_node_name": "Star-2B-Pop",
+            "z_node_mac": "fa:ce:b0:36:cb:ce",
+            "z_node_name": "Star-2C",
+            "link_type": 1
+          },
+          {
+            "name": "link-Star-2B-Pop-Star-2D",
+            "a_node_mac": "fa:ce:b0:1f:46:1a",
+            "a_node_name": "Star-2B-Pop",
+            "z_node_mac": "fa:ce:b0:47:04:c2",
+            "z_node_name": "Star-2D",
+            "link_type": 1
+          },
+          {
+            "name": "link-Star-2B-Pop-Star-2F",
+            "a_node_mac": "fa:ce:b0:68:26:ff",
+            "a_node_name": "Star-2B-Pop",
+            "z_node_mac": "fa:ce:b0:95:7c:69",
+            "z_node_name": "Star-2F",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 13.4,
+              "latitude": 37.5535,
+              "longitude": -122.067
+            },
+            "name": "SITE_2B"
+          },
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 11.6,
+              "latitude": 37.5535,
+              "longitude": -122.067
+            },
+            "name": "SITE_2A"
+          },
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 13.4,
+              "latitude": 37.5539,
+              "longitude": -122.067
+            },
+            "name": "SITE_2C"
+          },
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 6.7,
+              "latitude": 37.5536,
+              "longitude": -122.066
+            },
+            "name": "SITE_2D"
+          },
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 11,
+              "latitude": 37.5533,
+              "longitude": -122.067
+            },
+            "name": "SITE_2F"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "Star-2B-Pop": {
+            "linkParamsOverride": {
+              "fa:ce:b0:36:cb:ce": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:95:7c:69": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:47:04:c2": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:3a:bc:34": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:b9:97:18": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:1f:46:1a": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:59:29:24": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:68:26:ff": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "Star-2A": {
+            "linkParamsOverride": {
+              "fa:ce:b0:b9:97:18": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:0b:17:63": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:3a:bc:34": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "Star-2C": {
+            "linkParamsOverride": {
+              "fa:ce:b0:59:29:24": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:36:cb:ce": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "Star-2D": {
+            "linkParamsOverride": {
+              "fa:ce:b0:1f:46:1a": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:3b:a0:e4": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:47:04:c2": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:b5:04:42": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "Star-2F": {
+            "linkParamsOverride": {
+              "fa:ce:b0:68:26:ff": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:95:7c:69": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:bf:e8:95": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

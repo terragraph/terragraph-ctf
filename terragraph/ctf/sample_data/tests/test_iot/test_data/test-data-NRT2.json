@@ -1,0 +1,36 @@
+{
+  "test_meta_info": {
+    "test_code": "NodeIOTv2-NRT-2 (Node Routing Tests) - Y-Street",
+    "test_code_description": "The purpose of this test is to validate the re-routing capabilities of (OEM DN DUT) in Y-street topology when the links on the Y-Street are flapped. Topo-5"
+  },
+  "disable_links": {
+    "disabling_order": [
+      "x",
+      "x",
+      "x",
+      "x",
+      "x"
+    ],
+    "x": {
+      "link_name": "link-MPK_18-48-MPK_18-57",
+      "initiator_mac": "fa:ce:b0:a5:52:3b",
+      "responder_mac": "fa:ce:b0:e9:90:1d"
+    }
+  },
+  "traffic_stream": {
+    "from_device_id": 9,
+    "to_device_id": 5,
+    "from_netns": "eth4",
+    "to_netns": "enp7s0",
+    "bandwidth": 500,
+    "threshold": {
+      "throughput": 0.95,
+      "lost datagrams": 0.1
+    },
+    "port": 5002,
+    "traffic_type": "UDP",
+    "direction": "bi",
+    "packet_size": "1440",
+    "time": 1800
+  }
+}

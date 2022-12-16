@@ -1,0 +1,54 @@
+{
+  "test_meta_info": {
+    "test_code": "TP-MH4.9",
+    "test_code_description": "Test the 4-Hop TPUT at MCS 9, packet size 1452(UDP), 1428(TCP)."
+  },
+  "ping_profile": {
+    "x_hop": [
+      {
+        "from_device_id": 7,
+        "to_device_id": 10,
+        "from_netns": "eth0",
+        "to_netns": "eth3"
+      }
+    ]
+  },
+  "traffic_profile": {
+    "xhop_9_udp": [
+      {
+        "from_device_id": 7,
+        "to_device_id": 10,
+        "from_netns": "eth0",
+        "to_netns": "eth3",
+        "bandwidth": 1000,
+        "threshold": {
+          "throughput": 0.95,
+          "lost datagrams": 1.0
+        },
+        "port": 5002,
+        "traffic_type": "UDP",
+        "direction": "bi",
+        "packet_size": "1452",
+        "time": 300
+      }
+    ],
+    "xhop_9_tcp": [
+      {
+        "from_device_id": 7,
+        "to_device_id": 10,
+        "from_netns": "eth0",
+        "to_netns": "eth3",
+        "bandwidth": 1000,
+        "threshold": {
+          "throughput": 0.95,
+          "lost datagrams": 1.0
+        },
+        "port": 5004,
+        "traffic_type": "TCP",
+        "direction": "bi",
+        "packet_size": "1428",
+        "time": 300
+      }
+    ]
+  }
+}

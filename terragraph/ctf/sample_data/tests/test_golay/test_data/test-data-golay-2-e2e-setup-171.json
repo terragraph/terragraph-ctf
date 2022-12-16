@@ -1,0 +1,25 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GOLAY-2-1",
+    "test_code_description": "Test link rx,tx golay index by setting rx, tx golay index on initiator node_config"
+  },
+  "test_options": {
+    "initiator_node_id": 3,
+    "initiator_node_name": "MPK-FIG8_10.x",
+    "initiator_mac": "fa:ce:b0:87:c9:da",
+    "responder_node_id": 4,
+    "responder_node_name": "MPK-FIG8_12.03",
+    "responder_mac": "fa:ce:b0:ea:d4:ef",
+    "override_key_tx": "linkParamsOverride.fa:ce:b0:ea:d4:ef.fwParams.txGolayIdx",
+    "override_key_rx": "linkParamsOverride.fa:ce:b0:ea:d4:ef.fwParams.rxGolayIdx",
+    "golay_test_idxs": [
+      2,
+      3,
+      7
+    ],
+    "ping_all_src_node_id": 4,
+    "ping_all_skip_node_ids": [
+      2
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "ping_streams": [
+    {
+      "from_device_id": 9,
+      "to_device_id": 5,
+      "from_netns": "eth4",
+      "to_netns": "enp7s0"
+    }
+  ],
+  "traffic_streams": [
+    {
+      "from_device_id": 6,
+      "to_device_id": 5,
+      "from_netns": "enp7s0",
+      "to_netns": "enp7s0"
+    }
+  ]
+}

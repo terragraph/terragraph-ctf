@@ -1,0 +1,29 @@
+{
+  "test_meta_info": {
+    "test_code": "8021X-1-4",
+    "test_code_description": "Same as 8021x-1-2, but configure as DN responder two of the 16 peers. "
+  },
+  "e2e_ignition_config": {
+    "continue_on_failure": false,
+    "negate_result": false,
+    "ignition_timeout_s": 600
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 14,
+      "to_device_id": 15,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 1000,
+      "threshold": {
+        "throughput": 0.9,
+        "lost datagrams": 0.01
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    }
+  ]
+}

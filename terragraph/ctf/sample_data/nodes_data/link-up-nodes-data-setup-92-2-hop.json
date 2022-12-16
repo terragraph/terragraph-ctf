@@ -1,0 +1,70 @@
+{
+  "1": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:22:af:64",
+          "responder_mac": "fa:ce:b0:89:76:90",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65435,
+        "neighbors": {
+          "0": {
+            "asn": 65424,
+            "ipv6": "2001:0ed6:39::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:80a6:19::/60"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:cc8a:5a::]:7007",
+        "e2e-network-prefix": "2001:80a6:19::/60,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:0ed6:39::",
+        "POP_ADDR": "2001:e8e0:bd::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:b3bb:90::"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:13:f6:51",
+          "responder_mac": "fa:ce:b0:08:bd:d9",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ping_stream": {
+    "from_device_id": 9,
+    "to_device_id": 7,
+    "from_netns": "eth4",
+    "to_netns": "enp7s0"
+  },
+  "udp_traffic": {
+    "from_device_id": 9,
+    "to_device_id": 5,
+    "from_netns": "eth4",
+    "to_netns": "enp7s0",
+    "bandwidth": 1450,
+    "threshold": {
+      "throughput": 0.99,
+      "lost datagrams": 0.01
+    },
+    "port": 5002,
+    "traffic_type": "UDP",
+    "direction": "bi",
+    "packet_size": "1440",
+    "time": 300
+  },
+  "tcp_traffic": {
+    "from_device_id": 9,
+    "to_device_id": 5,
+    "from_netns": "eth4",
+    "to_netns": "enp7s0",
+    "bandwidth": 1450,
+    "threshold": {
+      "throughput": 0.99,
+      "lost datagrams": 0.01
+    },
+    "port": 5002,
+    "traffic_type": "TCP",
+    "direction": "bi",
+    "packet_size": "1440",
+    "time": 300
+  }
+}

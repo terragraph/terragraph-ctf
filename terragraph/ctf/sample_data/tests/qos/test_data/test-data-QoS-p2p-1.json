@@ -1,0 +1,103 @@
+{
+  "test_meta_info": {
+    "test_code": "QoS-P2P-1",
+    "test_code_description": "This test checks the basic functioning of traffic policers by enforcing the CIR and the EIR numbers"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "fwStatsConfig": {
+        "TGF_STATS_BF": true,
+        "TGF_STATS_MTPO": true,
+        "TGF_STATS_BF_SCAN": true
+      }
+    }
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        },
+        "cpeConfig": {
+          "TenGigabitEthernet0": {
+            "policers": {
+              "0": {
+                "cir": 50000,
+                "eir": 150000
+              },
+              "3": {
+                "cir": 150000,
+                "eir": 150000
+              }
+            }
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        }
+      }
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 282,
+      "threshold": {
+        "throughput": 0.6,
+        "lost datagrams": 40
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x88"
+    },
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 470,
+      "threshold": {
+        "throughput": 0.54,
+        "lost datagrams": 46
+      },
+      "port": 5003,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x28"
+    }
+  ],
+  "ping_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3"
+    }
+  ]
+}

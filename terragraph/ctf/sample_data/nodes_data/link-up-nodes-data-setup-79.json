@@ -1,0 +1,35 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:18:aa:95",
+          "responder_mac": "fa:ce:b0:f3:6e:b3",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "respNodeType": 2
+        }
+      },
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "HMAC_VERBOSE": "2"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "HMAC_VERBOSE": "2"
+      }
+    }
+  }
+}

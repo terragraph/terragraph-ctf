@@ -1,0 +1,15 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:84:ce:2c",
+          "responder_mac": "fa:ce:b0:c5:f1:3c",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "2": {}
+}

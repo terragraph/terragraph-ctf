@@ -1,0 +1,143 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_STA8",
+    "test_code_description": "It checks network availability on a P2MP setup with a burst load of 1500Mbps. Average throughput should be a minimum 1000Mbps all the time"
+  },
+  "stability_profile": {
+    "total_time": 28800,
+    "split_iperf_time": 7200,
+    "burst_mode_delay": 3600,
+    "burst_mode_time": 900,
+    "burst_mode_bandwidth": 428
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 14,
+      "to_device_id": 15,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 16,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 17,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 18,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 19,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5010,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 20,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5012,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 21,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5014,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 22,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 142,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5016,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    }
+  ]
+}

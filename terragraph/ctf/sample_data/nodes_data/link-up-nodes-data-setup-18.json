@@ -1,0 +1,26 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:94:67:1e",
+          "responder_mac": "fa:ce:b0:b7:1b:3e",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

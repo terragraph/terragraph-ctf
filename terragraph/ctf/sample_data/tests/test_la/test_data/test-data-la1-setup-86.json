@@ -1,0 +1,102 @@
+{
+  "test_meta_info": {
+    "test_code": "LA1.0",
+    "test_code_description": "The purpose of this test is to ensure that LA maintains good TCP performance for both links on a P2MP setup"
+  },
+  "test_details": {
+    "dn_initiator_id": 1,
+    "dn_responder_id_1": 2,
+    "dn_responder_id_2": 3,
+    "attenuator_id": 8,
+    "attenuation_level": 0
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    },
+    "3": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    }
+  },
+  "test_options": {
+    "node_id_1": [
+      1
+    ],
+    "node_id_2": [
+      2
+    ],
+    "node_id_3": [
+      3
+    ],
+    "mcs_value": 35,
+    "initiator_mac": "fa:ce:b0:ad:6c:cd",
+    "responder_mac_1": "fa:ce:b0:9a:7f:f8",
+    "responder_mac_2": "fa:ce:b0:41:6c:4b"
+  },
+  "node_info": {
+    "initiator_id": 1,
+    "responder_id_1": 2,
+    "responder_id_2": 3,
+    "initiator_mac": "fa:ce:b0:ad:6c:cd",
+    "responder_mac_1": "fa:ce:b0:9a:7f:f8",
+    "responder_mac_2": "fa:ce:b0:41:6c:4b"
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 5,
+      "from_netns": "eth7",
+      "to_netns": "eth6",
+      "bandwidth": 625,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.01
+      },
+      "port": 5002,
+      "traffic_type": "TCP",
+      "direction": "bi",
+      "packet_size": "1428",
+      "time": 300
+    },
+    {
+      "from_device_id": 4,
+      "to_device_id": 6,
+      "from_netns": "eth7",
+      "to_netns": "eth5",
+      "bandwidth": 625,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.01
+      },
+      "port": 5005,
+      "traffic_type": "TCP",
+      "direction": "bi",
+      "packet_size": "1428",
+      "time": 600
+    }
+  ]
+}

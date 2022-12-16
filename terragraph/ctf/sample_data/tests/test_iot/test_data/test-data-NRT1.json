@@ -1,0 +1,41 @@
+{
+  "test_meta_info": {
+    "test_code": "NodeIOTv2-NRT-1 (Node Routing Tests)",
+    "test_code_description": "The purpose of this test is to validate the re-routing capabilities. When the link on 'OEM DN DUT' flaps, 'OEM DN DUT' should re-route the traffic using alternate link. Topo-4 (O-Setup) with no link to CN"
+  },
+  "disable_links": {
+    "disabling_order": [
+      "x",
+      "x",
+      "y",
+      "x",
+      "y"
+    ],
+    "x": {
+      "link_name": "link-MPK_18-49-POP_MPK_Roof_16",
+      "initiator_mac": "fa:ce:b0:28:02:5c",
+      "responder_mac": "fa:ce:b0:ca:0a:ea"
+    },
+    "y": {
+      "link_name": "link-MPK_18-57-POP_MPK_Roof_16",
+      "initiator_mac": "fa:ce:b0:17:56:90",
+      "responder_mac": "fa:ce:b0:14:b3:4f"
+    }
+  },
+  "traffic_stream": {
+    "from_device_id": 9,
+    "to_device_id": 16,
+    "from_netns": "eth4",
+    "to_netns": "enp7s0",
+    "bandwidth": 500,
+    "threshold": {
+      "throughput": 0.95,
+      "lost datagrams": 0.1
+    },
+    "port": 5002,
+    "traffic_type": "UDP",
+    "direction": "bi",
+    "packet_size": "1440",
+    "time": 1800
+  }
+}

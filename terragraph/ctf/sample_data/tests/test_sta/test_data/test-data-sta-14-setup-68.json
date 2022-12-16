@@ -1,0 +1,24 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_STA14 - High Load Availability - fig-of-8(multihop)",
+    "test_code_description": "This test checks network availability on a fig-of-8 setup with a load of  1000Mbps"
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 7,
+      "to_device_id": 12,
+      "from_netns": "eth0",
+      "to_netns": "eth5",
+      "bandwidth": 1000,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 10.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    }
+  ]
+}

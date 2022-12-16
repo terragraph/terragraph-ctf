@@ -1,0 +1,158 @@
+{
+  "1": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "6": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 4,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:f1:91:d0",
+          "responder_mac": "fa:ce:b0:a3:d5:cd",
+          "respNodeType": "CN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "7": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:03:28:b5",
+          "responder_mac": "fa:ce:b0:3d:20:52",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:c6:e2:ec",
+          "responder_mac": "fa:ce:b0:0f:d8:b4",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:56:9a:8a",
+          "responder_mac": "fa:ce:b0:bb:13:0b",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:56:9a:8a",
+          "responder_mac": "fa:ce:b0:1d:01:7c",
+          "respNodeType": "CN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "8": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 1,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:64:ec:8d",
+          "responder_mac": "fa:ce:b0:68:ae:b8",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:64:ec:8d",
+          "responder_mac": "fa:ce:b0:48:bd:98",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:64:ec:8d",
+          "responder_mac": "fa:ce:b0:a8:9d:4f",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:64:3f:9b",
+          "responder_mac": "fa:ce:b0:4c:65:1f",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:53:1e:0b",
+          "responder_mac": "fa:ce:b0:c6:68:d4",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "9": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 3,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:47:ce:ae",
+          "responder_mac": "fa:ce:b0:c2:24:b9",
+          "respNodeType": "CN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "10": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "11": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

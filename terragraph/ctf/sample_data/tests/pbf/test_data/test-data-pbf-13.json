@@ -1,0 +1,50 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_PBF_T13",
+    "test_code_description": "This test is a PBF13 test"
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 10,
+      "to_device_id": 11,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 100,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.05
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ],
+  "scan_profiles": [
+    {
+      "scanType": 1,
+      "scanMode": 2,
+      "txNode": "fa:ce:b0:c5:29:c1",
+      "rxNodes": [
+        "fa:ce:b0:e3:1e:bc"
+      ],
+      "apply": true,
+      "bwgdLen": 64
+    },
+    {
+      "scanType": 1,
+      "scanMode": 2,
+      "txNode": "fa:ce:b0:e3:1e:bc",
+      "rxNodes": [
+        "fa:ce:b0:c5:29:c1"
+      ],
+      "apply": true,
+      "bwgdLen": 64
+    }
+  ],
+  "file_paths": {
+    "script_file_name": "scan_verify.py",
+    "target_path": "/tmp/e2e_custom_logs/"
+  }
+}

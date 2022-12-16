@@ -1,0 +1,53 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:b4:48:c6",
+          "responder_mac": "fa:ce:b0:cc:c5:28",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "71::/64"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:93d6:23::/61,64"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      },
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "68::/64"
+      }
+    }
+  },
+  "3": {
+    "traffic_gen": {
+      "server_id": 3,
+      "client_id": 4
+    },
+    "port_name": "eth7"
+  },
+  "4": {
+    "port_name": "eth6"
+  }
+}

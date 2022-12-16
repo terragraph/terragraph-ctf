@@ -1,0 +1,24 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_STA3_1",
+    "test_code_description": "It checks network availability on a P2P setup with a load of 2000Mbps. Average throughput should be minimum 1600Mbps"
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth6",
+      "to_netns": "eth7",
+      "bandwidth": 2000,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ]
+}

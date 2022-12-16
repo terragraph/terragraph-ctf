@@ -1,0 +1,422 @@
+{
+  "1": {
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65130,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:e3ab:74::"
+          }
+        }
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:dd80:fe::]:7007",
+        "e2e-network-prefix": "2001:efb7:89::/60,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:e3ab:74::",
+        "NAT64_IPV4_ADDR": "",
+        "NAT64_IPV6_PREFIX": "",
+        "NAT64_POP_ENABLED": "0",
+        "POP_ADDR": "2001:4df3:3e::",
+        "POP_BGP_ROUTING": "0",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "1",
+        "VPP_ADDR": "2001:a197:4a::"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "CPE_IFACE_IP_PREFIX": "2001:f255:91::/64",
+        "CPE_INTERFACE": "TenGigabitEthernet0"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "CPE_IFACE_IP_PREFIX": "2001:968c:4d::/64",
+        "CPE_INTERFACE": "TenGigabitEthernet0"
+      }
+    }
+  },
+  "8": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "config": {},
+        "links": [
+          {
+            "a_node_mac": "fa:ce:b0:17:56:90",
+            "a_node_name": "MPK_18-57",
+            "is_alive": false,
+            "link_type": 1,
+            "linkup_attempts": 0,
+            "name": "link-MPK_18-57-POP_MPK_Roof_16",
+            "z_node_mac": "fa:ce:b0:14:b3:4f",
+            "z_node_name": "POP_MPK_Roof_16"
+          },
+          {
+            "a_node_mac": "fa:ce:b0:e9:90:1d",
+            "a_node_name": "MPK_18-48",
+            "is_alive": false,
+            "link_type": 1,
+            "linkup_attempts": 0,
+            "name": "link-MPK_18-48-MPK_18-57",
+            "z_node_mac": "fa:ce:b0:a5:52:3b",
+            "z_node_name": "MPK_18-57"
+          }
+        ],
+        "name": "configuration-273",
+        "nodes": [
+          {
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "mac_addr": "fa:ce:b0:2b:c0:f6",
+            "name": "POP_MPK_Roof_16",
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "A",
+            "status": 2,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:14:b3:4f",
+              "fa:ce:b0:ef:fa:1f",
+              "fa:ce:b0:d7:11:d5",
+              "fa:ce:b0:ca:0a:ea"
+            ]
+          },
+          {
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "mac_addr": "fa:ce:b0:6e:28:a0",
+            "name": "MPK_18-57",
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "B",
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:17:56:90",
+              "fa:ce:b0:20:1e:a4",
+              "fa:ce:b0:a5:52:3b",
+              "fa:ce:b0:f2:9c:f6"
+            ]
+          },
+          {
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "mac_addr": "fa:ce:b0:17:e4:fe",
+            "name": "MPK_18-48",
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "D",
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:ed:e2:74",
+              "fa:ce:b0:cc:c0:45",
+              "fa:ce:b0:a0:81:4e",
+              "fa:ce:b0:e9:90:1d"
+            ]
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 19,
+              "altitude": 12.2,
+              "latitude": 37.486151667,
+              "longitude": -122.148456667
+            },
+            "name": "A"
+          },
+          {
+            "location": {
+              "accuracy": 100,
+              "altitude": 0,
+              "latitude": 37.4842,
+              "longitude": -122.1507
+            },
+            "name": "B"
+          },
+          {
+            "location": {
+              "accuracy": 100,
+              "altitude": 0,
+              "latitude": 37.4843,
+              "longitude": -122.1502
+            },
+            "name": "D"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "MPK_18-48": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:a5:52:3b": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:e9:90:1d": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            },
+            "topologyInfo": {
+              "distributedIgnitionNumColors": 4,
+              "neighborInfo": {
+                "fa:ce:b0:a5:52:3b": {
+                  "controlSuperframe": 0,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:e9:90:1d",
+                  "nodePolarity": 1,
+                  "nodeType": 2
+                }
+              },
+              "nodeName": "MPK_18-48",
+              "nodeType": 2,
+              "radioInfo": {
+                "fa:ce:b0:e9:90:1d": {
+                  "distributedIgnitionColor": 0
+                }
+              },
+              "site": {
+                "location": {
+                  "accuracy": 100,
+                  "altitude": 0,
+                  "latitude": 37.4843,
+                  "longitude": -122.1502
+                },
+                "name": "D"
+              },
+              "topologyName": "configuration-273"
+            }
+          },
+          "MPK_18-57": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:c5:8c:68": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:e9:90:1d": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:14:b3:4f": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a5:52:3b": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:17:56:90": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            },
+            "topologyInfo": {
+              "distributedIgnitionNumColors": 4,
+              "neighborInfo": {
+                "fa:ce:b0:c5:8c:68": {
+                  "controlSuperframe": 255,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:17:56:90",
+                  "nodePolarity": 2,
+                  "nodeType": 1
+                },
+                "fa:ce:b0:e9:90:1d": {
+                  "controlSuperframe": 0,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:a5:52:3b",
+                  "nodePolarity": 2,
+                  "nodeType": 2
+                },
+                "fa:ce:b0:14:b3:4f": {
+                  "controlSuperframe": 0,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:17:56:90",
+                  "nodePolarity": 2,
+                  "nodeType": 2
+                }
+              },
+              "nodeName": "MPK_18-57",
+              "nodeType": 2,
+              "radioInfo": {
+                "fa:ce:b0:a5:52:3b": {
+                  "distributedIgnitionColor": 3
+                },
+                "fa:ce:b0:17:56:90": {
+                  "distributedIgnitionColor": 1
+                }
+              },
+              "site": {
+                "location": {
+                  "accuracy": 100,
+                  "altitude": 0,
+                  "latitude": 37.4842,
+                  "longitude": -122.1507
+                },
+                "name": "B"
+              },
+              "topologyName": "configuration-273"
+            }
+          },
+          "POP_MPK_Roof_16": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:efb7:89::/60"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:17:56:90": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:14:b3:4f": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            },
+            "topologyInfo": {
+              "distributedIgnitionNumColors": 4,
+              "neighborInfo": {
+                "fa:ce:b0:17:56:90": {
+                  "controlSuperframe": 0,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:14:b3:4f",
+                  "nodePolarity": 1,
+                  "nodeType": 2
+                }
+              },
+              "nodeName": "POP_MPK_Roof_16",
+              "nodeType": 2,
+              "radioInfo": {
+                "fa:ce:b0:14:b3:4f": {
+                  "distributedIgnitionColor": 0
+                }
+              },
+              "site": {
+                "location": {
+                  "accuracy": 19,
+                  "altitude": 12.2,
+                  "latitude": 37.486151667,
+                  "longitude": -122.148456667
+                },
+                "name": "A"
+              },
+              "topologyName": "configuration-273"
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:efb7:89::/60"
+          }
+        },
+        "node_config_overrides": {
+          "POP_MPK_Roof_16": {
+            "bgpParams": {
+              "localAsn": 65130,
+              "neighbors": {
+                "0": {
+                  "asn": 65123,
+                  "ipv6": "2001:e3ab:74::"
+                }
+              }
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:dd80:fe::]:7007",
+              "e2e-network-prefix": "2001:efb7:89::/60,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:e3ab:74::",
+              "NAT64_IPV4_ADDR": "",
+              "NAT64_IPV6_PREFIX": "",
+              "NAT64_POP_ENABLED": "0",
+              "POP_ADDR": "2001:4df3:3e::",
+              "POP_BGP_ROUTING": "0",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "1",
+              "VPP_ADDR": "2001:a197:4a::"
+            }
+          },
+          "MPK_18-48": {
+            "envParams": {
+              "CPE_IFACE_IP_PREFIX": "2001:968c:4d::/64",
+              "CPE_INTERFACE": "TenGigabitEthernet0"
+            }
+          },
+          "MPK_18-57": {
+            "envParams": {
+              "CPE_IFACE_IP_PREFIX": "2001:f255:91::/64",
+              "CPE_INTERFACE": "TenGigabitEthernet0"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:b4:48:c6",
+          "responder_mac": "fa:ce:b0:cc:c5:28",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "tunnel_destinations": [
+      2
+    ],
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:93d6:23::/61,64"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      },
+      "cpeParams": {
+        "cpeInterfaces": "TenGigabitEthernet0",
+        "cpePerInterfacePrefixes": {
+          "TenGigabitEthernet0": "71::/64"
+        }
+      },
+      "tunnelConfig": {
+        "2": {
+          "enabled": true,
+          "localInterface": "TenGigabitEthernet0",
+          "dstIp": "",
+          "dstNodeName": "",
+          "tunnelType": "SRV6",
+          "tunnelParams": {
+            "vlanId": 100
+          }
+        }
+      }
+    }
+  },
+  "2": {
+    "tunnel_destinations": [
+      1
+    ],
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      },
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeParams": {
+        "cpeInterfaces": "TenGigabitEthernet0",
+        "cpePerInterfacePrefixes": {
+          "TenGigabitEthernet0": "68::/64"
+        }
+      },
+      "tunnelConfig": {
+        "1": {
+          "enabled": true,
+          "localInterface": "TenGigabitEthernet0",
+          "dstIp": "",
+          "dstNodeName": "",
+          "tunnelType": "SRV6",
+          "tunnelParams": {
+            "vlanId": 100
+          }
+        }
+      }
+    }
+  },
+  "3": {
+    "traffic_gen": {
+      "server_id": 3,
+      "client_id": 4
+    },
+    "port_name": "eth7"
+  },
+  "4": {
+    "port_name": "eth6"
+  }
+}

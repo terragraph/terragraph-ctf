@@ -1,0 +1,60 @@
+{
+  "test_meta_info": {
+    "test_code": "E2E-18",
+    "test_code_description": "Stop and restart e2e minion in CN nodes 2,3,4 & 5 in P2MP network"
+  },
+  "test_options": {
+    "ping_all_src_node_id": 1,
+    "ping_all_skip_node_ids": [],
+    "actions": [
+      {
+        "e2e_minion_sv": "force-stop",
+        "node_ids": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "delay_verify_topology_s": 180,
+        "expected_num_nodes_links": 4
+      },
+      {
+        "e2e_minion_sv": "start",
+        "node_ids": [
+          2,
+          3
+        ],
+        "delay_verify_topology_s": 180,
+        "expected_num_nodes_links": 2
+      },
+      {
+        "e2e_minion_sv": "force-stop",
+        "node_ids": [
+          2,
+          3
+        ],
+        "delay_verify_topology_s": 180,
+        "expected_num_nodes_links": 4
+      },
+      {
+        "e2e_minion_sv": "start",
+        "node_ids": [
+          4,
+          5
+        ],
+        "delay_verify_topology_s": 180,
+        "expected_num_nodes_links": 2
+      },
+      {
+        "e2e_minion_sv": "start",
+        "node_ids": [
+          2,
+          3
+        ],
+        "delay_verify_topology_s": 180,
+        "expected_num_nodes_links": 0
+      }
+    ],
+    "recheck_network_up_timeout": 300
+  }
+}

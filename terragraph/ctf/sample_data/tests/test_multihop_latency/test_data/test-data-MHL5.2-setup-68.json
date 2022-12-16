@@ -1,0 +1,52 @@
+{
+  "test_meta_info": {
+    "test_code": "MHL5.2",
+    "test_code_description": "5-Hop at iperf rate 1250 mbps for UDP and TCP traffic"
+  },
+  "cpe_ping_options": {
+    "duration": 300,
+    "periodicity": 0.2,
+    "allow_pkt_loss_percnt": 3,
+    "allow_min_latency": -1,
+    "allow_avg_latency": 10,
+    "allow_max_latency": -1
+  },
+  "traffic_profile": {
+    "udp": [
+      {
+        "from_device_id": 7,
+        "to_device_id": 12,
+        "from_netns": "eth0",
+        "to_netns": "eth5",
+        "bandwidth": 1250,
+        "threshold": {
+          "throughput": 0.8,
+          "lost datagrams": 3.0
+        },
+        "port": 5002,
+        "traffic_type": "UDP",
+        "direction": "bi",
+        "packet_size": "1452",
+        "time": 300
+      }
+    ],
+    "tcp": [
+      {
+        "from_device_id": 7,
+        "to_device_id": 12,
+        "from_netns": "eth0",
+        "to_netns": "eth5",
+        "bandwidth": 1250,
+        "threshold": {
+          "throughput": 0.8,
+          "lost datagrams": 3.0
+        },
+        "port": 5004,
+        "traffic_type": "TCP",
+        "direction": "bi",
+        "packet_size": "1428",
+        "time": 300
+      }
+    ]
+  }
+}

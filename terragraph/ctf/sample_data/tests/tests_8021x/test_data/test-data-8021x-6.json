@@ -1,0 +1,93 @@
+{
+  "test_meta_info": {
+    "test_code": "8021X-6",
+    "test_description": "P2MP (2DN, 3CNs) 802.1X enabled. Run Traffic:"
+  },
+  "e2e_ignition_config": {
+    "continue_on_failure": false,
+    "negate_result": false,
+    "ignition_timeout_s": 600
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 14,
+      "to_device_id": 15,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 225,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 10.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 17,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 225,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 10.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 18,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 225,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 10.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 22,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 225,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 10.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 23,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 225,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 10.0
+      },
+      "port": 5010,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "0": {
+    "setup": {
+      "name": "network7"
+    }
+  },
+  "1": {
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65001,
+        "neighbors": {
+          "0": {
+            "asn": 65000,
+            "ipv6": "2001:489f:b0::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:fba8:a3::/58,2001:6441:00::/64,2001:10a8:d3::/64,2001:a421:9e::/64,2001:3a25:1a::/64"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:f24e:e5::]:7007",
+        "e2e-network-prefix": "2001:fba8:a3::/58,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:489f:b0::",
+        "NAT64_IPV4_ADDR": "",
+        "NAT64_IPV6_PREFIX": "",
+        "NAT64_POP_ENABLED": "0",
+        "POP_ADDR": "2001:fcf4:04::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:e31a:56::"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:6441:00::/64"
+        }
+      }
+    }
+  },
+  "6": {
+    "port_name": "eth6"
+  },
+  "7": {
+    "port_name": "enp7s0"
+  },
+  "8": {
+    "port_name": "enp7s0"
+  },
+  "9": {
+    "port_name": "enp7s0"
+  },
+  "10": {
+    "port_name": "enp7s0"
+  },
+  "11": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "DUT_1",
+            "mac_addr": "fa:ce:b0:5d:1e:c9",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:68:f4:00",
+              "fa:ce:b0:3e:ea:89",
+              "fa:ce:b0:bf:24:6e",
+              "fa:ce:b0:fd:7d:62"
+            ],
+            "pop_node": true,
+            "node_type": 2,
+            "is_primary": true,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "A"
+          },
+          {
+            "name": "DUT_2",
+            "mac_addr": "fa:ce:b0:e1:da:65",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:05:34:78",
+              "fa:ce:b0:dd:d0:b4",
+              "fa:ce:b0:d4:c0:1d",
+              "fa:ce:b0:1a:c8:ec"
+            ],
+            "pop_node": false,
+            "node_type": 2,
+            "is_primary": true,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "B"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-DUT_1-DUT_2",
+            "a_node_name": "DUT_1",
+            "z_node_name": "DUT_2",
+            "a_node_mac": "fa:ce:b0:68:f4:00",
+            "z_node_mac": "fa:ce:b0:dd:d0:b4",
+            "is_alive": false,
+            "link_type": 1,
+            "linkup_attempts": 0
+          }
+        ],
+        "sites": [
+          {
+            "name": "A",
+            "location": {
+              "latitude": 37.5518,
+              "longitude": -122.068,
+              "altitude": 9.53,
+              "accuracy": 5.0
+            }
+          },
+          {
+            "name": "B",
+            "location": {
+              "latitude": 37.552,
+              "longitude": -122.068,
+              "altitude": 8.7,
+              "accuracy": 5.0
+            }
+          }
+        ],
+        "name": "P2P-PBF"
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "DUT_1": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:fba8:a3::/58"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:dd:d0:b4": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:68:f4:00": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "DUT_2": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:68:f4:00": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:dd:d0:b4": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "flags": {
+            "bt_tracker_ipv6_global_addressable_ifname": "ens160",
+            "enable_centralized_prefix_alloc": "true",
+            "enable_deterministic_prefix_alloc": "false",
+            "scan_disable_periodic": "false",
+            "v": "2"
+          },
+          "ignitionParams": {
+            "enable": true
+          },
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:fba8:a3::/58"
+          },
+          "scanSchedule": {
+            "cbfEnable": false,
+            "combinedScanTimeoutSec": 900,
+            "imEnable": false,
+            "pbfEnable": false,
+            "rtcalEnable": false
+          }
+        },
+        "node_config_overrides": {
+          "DUT_1": {
+            "bgpParams": {
+              "localAsn": 65001,
+              "neighbors": {
+                "0": {
+                  "asn": 65000,
+                  "ipv6": "2001:489f:b0::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:fba8:a3::/58,2001:6441:00::/64,2001:10a8:d3::/64,2001:a421:9e::/64,2001:3a25:1a::/64"
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:f24e:e5::]:7007",
+              "e2e-network-prefix": "2001:fba8:a3::/58,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:489f:b0::",
+              "POP_ADDR": "2001:fcf4:04::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:e31a:56::"
+            }
+          },
+          "DUT_2": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:6441:00::/64"
+              }
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1",
+            "HMAC_VERBOSE": "2",
+            "FW_LOG_VERBOSE": "4"
+          },
+          "radioParamsBase": {
+            "fwStatsConfig": {
+              "TGF_STATS_BF": true,
+              "TGF_STATS_BF_SCAN": true,
+              "TGF_STATS_MTPO": true
+            }
+          },
+          "statsAgentParams": {
+            "endpointParams": {
+              "kafkaParams": {
+                "enabled": true
+              },
+              "nmsPublisherParams": {
+                "enabled": false
+              }
+            }
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

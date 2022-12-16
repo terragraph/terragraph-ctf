@@ -1,0 +1,68 @@
+{
+  "3": {
+    "node_config": {
+      "envParams": {
+        "DPDK_ENABLED": "1",
+        "FW_LOGGING_ENABLED": "1",
+        "FW_USE_NATIVE_BOARDFILE": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:83c2:8d::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:d28c:51::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:2ed8:55::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65124,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:d28c:51::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:7a4c:02::/56"
+      },
+      "cpeParams": {
+        "cpeInterfaces": "TenGigabitEthernet1,TenGigabitEthernet2",
+        "cpePerInterfacePrefixes": {
+          "TenGigabitEthernet1": "2001:9006:7c::/64",
+          "TenGigabitEthernet2": "2001:3a7b:e9::/64"
+        }
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:7a4c:02::/56,64",
+        "e2e-ctrl-url": "tcp://[2001:1cec:50::]:7007"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:71:ba:80",
+          "responder_mac": "fa:ce:b0:12:69:dc",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "DPDK_ENABLED": "1",
+        "FW_LOGGING_ENABLED": "1",
+        "FW_USE_NATIVE_BOARDFILE": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "cpeParams": {
+        "cpeInterfaces": "TenGigabitEthernet0,TenGigabitEthernet1",
+        "cpePerInterfacePrefixes": {
+          "TenGigabitEthernet0": "2001:67a6:43::/64",
+          "TenGigabitEthernet1": "2001:5c97:f3::/64"
+        }
+      }
+    }
+  }
+}

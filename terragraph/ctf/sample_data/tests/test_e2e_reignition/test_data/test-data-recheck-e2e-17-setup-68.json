@@ -1,0 +1,58 @@
+{
+  "test_meta_info": {
+    "test_code": "E2E-17",
+    "test_code_description": "Change channel, mcs, TxPower configs and toggle GPS config in-band"
+  },
+  "test_options": {
+    "configs": [
+      {
+        "description": "change channel to 3",
+        "key": "radioParamsBase.fwParams.channel",
+        "value": 3,
+        "timeout_network_up_s": 300
+      },
+      {
+        "description": "change channel to 2",
+        "key": "radioParamsBase.fwParams.channel",
+        "value": 2,
+        "timeout_network_up_s": 300
+      },
+      {
+        "description": "change mcs to 9",
+        "key": "radioParamsBase.fwParams.mcs",
+        "value": 9,
+        "timeout_network_up_s": 300
+      },
+      {
+        "description": "change mcs to 12",
+        "key": "radioParamsBase.fwParams.mcs",
+        "value": 12,
+        "timeout_network_up_s": 300
+      },
+      {
+        "description": "change txpower to 17",
+        "key": "radioParamsBase.fwParams.txPower",
+        "value": 17,
+        "timeout_network_up_s": 300
+      },
+      {
+        "description": "change txpower to 21",
+        "key": "radioParamsBase.fwParams.txPower",
+        "value": 21,
+        "timeout_network_up_s": 300
+      }
+    ],
+    "config_gps_disable": {
+      "description": "change gps to disable",
+      "key": "radioParamsBase.fwParams.forceGpsDisable",
+      "value": 1,
+      "timeout_network_up_s": 600
+    },
+    "config_gps_enable": {
+      "description": "change gps to enable",
+      "key": "radioParamsBase.fwParams.forceGpsDisable",
+      "value": 0,
+      "timeout_network_up_s": 600
+    }
+  }
+}

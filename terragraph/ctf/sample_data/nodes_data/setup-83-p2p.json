@@ -1,0 +1,267 @@
+{
+  "0": {
+    "setup": {
+      "name": "network6"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:d983:ad::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:49dd:ec::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:c14e:5b::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65517,
+        "neighbors": {
+          "0": {
+            "asn": 65075,
+            "ipv6": "2001:49dd:ec::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:29d1:f7::/60"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:29d1:f7::/60,64",
+        "e2e-ctrl-url": "tcp://[2001:5f6a:62::]:7007"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:a12a:bf::/64"
+        }
+      }
+    }
+  },
+  "6": {
+    "traffic_gen": {
+      "server_id": 6,
+      "client_id": 10
+    },
+    "port_name": "eth4"
+  },
+  "10": {
+    "port_name": "eth3"
+  },
+  "11": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "Star-2B-Pop",
+            "mac_addr": "fa:ce:b0:15:5a:c0",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:68:26:ff",
+              "fa:ce:b0:59:29:24",
+              "fa:ce:b0:1f:46:1a",
+              "fa:ce:b0:b9:97:18"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "SITE_2B"
+          },
+          {
+            "name": "Star-2F",
+            "mac_addr": "fa:ce:b0:22:96:8a",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:95:7c:69",
+              "fa:ce:b0:c3:3d:95",
+              "fa:ce:b0:67:ae:53",
+              "fa:ce:b0:6c:58:3e"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2F"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-Star-2B-Pop-Star-2F",
+            "a_node_mac": "fa:ce:b0:68:26:ff",
+            "a_node_name": "Star-2B-Pop",
+            "z_node_mac": "fa:ce:b0:95:7c:69",
+            "z_node_name": "Star-2F",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 13.4,
+              "latitude": 37.5535,
+              "longitude": -122.067
+            },
+            "name": "SITE_2B"
+          },
+          {
+            "location": {
+              "accuracy": 22,
+              "altitude": 11,
+              "latitude": 37.5533,
+              "longitude": -122.067
+            },
+            "name": "SITE_2F"
+          }
+        ]
+      },
+      "configs": {
+        "controller_config": {
+          "flags": {
+            "bt_tracker_ipv6_global_addressable_ifname": "ens160",
+            "enable_centralized_prefix_alloc": "true",
+            "v": "2"
+          },
+          "ignitionParams": {
+            "enable": true
+          },
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:29d1:f7::/60"
+          }
+        },
+        "auto_node_config_overrides": {
+          "Star-2B-Pop": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:95:7c:69": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:b9:97:18": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:1f:46:1a": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:59:29:24": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:68:26:ff": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "Star-2F": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:68:26:ff": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:8b:38:fe": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:95:7c:69": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:bf:e8:95": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "node_config_overrides": {
+          "Star-2B-Pop": {
+            "bgpParams": {
+              "localAsn": 65517,
+              "neighbors": {
+                "0": {
+                  "asn": 65075,
+                  "ipv6": "2001:49dd:ec::"
+                }
+              }
+            },
+            "kvstoreParams": {
+              "e2e-network-prefix": "2001:29d1:f7::/60,64",
+              "e2e-ctrl-url": "tcp://[2001:5f6a:62::]:7007"
+            },
+            "popParams": {
+              "POP_ADDR": "2001:d983:ad::",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "GW_ADDR": "2001:49dd:ec::",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:c14e:5b::",
+              "POP_BGP_ROUTING": "1"
+            }
+          },
+          "Star-2F": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:a12a:bf::/64"
+              }
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "radioParamsBase": {
+            "fwStatsConfig": {
+              "TGF_STATS_BF": true,
+              "TGF_STATS_BF_SCAN": true,
+              "TGF_STATS_MTPO": true
+            }
+          },
+          "statsAgentParams": {
+            "endpointParams": {
+              "kafkaParams": {
+                "enabled": true
+              },
+              "nmsPublisherParams": {
+                "enabled": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

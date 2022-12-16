@@ -1,0 +1,67 @@
+{
+  "test_meta_info": {
+    "test_code": "LA0.1",
+    "test_code_description": "The purpose of this test to ensure that LA's performance is at least as good as Fixed MCS, given the link SNR yields < 0.1% PER for that MCS"
+  },
+  "test_details": {
+    "dn_initiator_id": 1,
+    "responder_id": 2,
+    "attenuator_id": 8,
+    "attenuation_level": 4
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "mcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "mcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    }
+  },
+  "test_options": {
+    "node_id": [
+      1,
+      2
+    ],
+    "mcs_value": 35,
+    "initiator_mac": "fa:ce:b0:ad:6c:cd",
+    "responder_mac": "fa:ce:b0:9a:7f:f8"
+  },
+  "node_info": {
+    "initiator_id": 1,
+    "responder_id": 2,
+    "initiator_mac": "fa:ce:b0:ad:6c:cd",
+    "responder_mac": "fa:ce:b0:9a:7f:f8"
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 5,
+      "from_netns": "eth7",
+      "to_netns": "eth6",
+      "bandwidth": 1700,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.01
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ]
+}

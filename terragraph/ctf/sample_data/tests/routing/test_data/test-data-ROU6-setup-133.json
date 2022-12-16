@@ -1,0 +1,76 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_ROU6",
+    "test_code_description": "Verify that re-route convergence time is within 240ms after link mcs drop in fig8"
+  },
+  "test_options": {
+    "action": {
+      "nodes": [
+        1,
+        4
+      ],
+      "node_names": [
+        "IF-TWRG-DN544",
+        "IF-TWRG-DN554"
+      ],
+      "event": "MCS_CONVERGENCE",
+      "re_route_finish_time_s": 0.24,
+      "ping_duration_s": 240,
+      "ping_interval_s": 0.02
+    },
+    "attenuator_all_nodes": [
+      8,
+      9
+    ],
+    "configs": [
+      {
+        "description": "change openr link metric map mcs8",
+        "key": "openrParams.linkMetricConfig.metricMap.MCS8",
+        "value": 15
+      },
+      {
+        "description": "change openr link metric map mcs7",
+        "key": "openrParams.linkMetricConfig.metricMap.MCS7",
+        "value": 15
+      },
+      {
+        "description": "change openr link metric map mcs6",
+        "key": "openrParams.linkMetricConfig.metricMap.MCS6",
+        "value": 15
+      },
+      {
+        "description": "change openr link metric map mcs5",
+        "key": "openrParams.linkMetricConfig.metricMap.MCS5",
+        "value": 15
+      },
+      {
+        "description": "change openr link metric map mcs4",
+        "key": "openrParams.linkMetricConfig.metricMap.MCS4",
+        "value": 15
+      }
+    ],
+    "link_configs": [
+      {
+        "description": "link mcs override to 6 on node 1:IF-404-8A",
+        "key": "linkParamsOverride.fa:ce:b0:bf:65:e1.fwParams.mcs",
+        "value": 6
+      },
+      {
+        "description": "link mcs override to 6 on node 2:IF-404-8F",
+        "key": "linkParamsOverride.fa:ce:b0:a7:cd:53.fwParams.mcs",
+        "value": 6
+      }
+    ],
+    "ping_all_src_node_id": 2,
+    "ping_all_skip_node_ids": [],
+    "setup_tg_nodes_fig8": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "node_cfg_file_path": "/data/cfg/node_config.json"
+  }
+}

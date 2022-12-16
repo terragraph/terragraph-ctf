@@ -1,0 +1,61 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_ROU7",
+    "test_code_description": "Verify that openR debouncing keeps the link down for 60 secs after the link flaps in fig8"
+  },
+  "test_options": {
+    "action": {
+      "nodes": [
+        2,
+        3
+      ],
+      "node_names": [
+        "IF-TWRG-DN545",
+        "IF-TWRG-DN546"
+      ],
+      "event": "BACKOFF",
+      "link_backoff_time_s": 40,
+      "ping_duration_s": 15,
+      "ping_interval_s": 0.02
+    },
+    "attenuator_all_nodes": [
+      8,
+      9
+    ],
+    "attenuator_action_nodes": [
+      9
+    ],
+    "attenuation_value": 60,
+    "attenuation_start_interval": 60,
+    "attenuation_end_interval": 300,
+    "attenuation_step_interval": 15,
+    "configs": [
+      {
+        "description": "change openr link flap max backoff time",
+        "key": "envParams.OPENR_LINK_FLAP_MAX_BACKOFF_MS",
+        "value": "60000"
+      },
+      {
+        "description": "disable fw param link impairment detection",
+        "key": "radioParamsBase.fwParams.linkImpairmentDetectionEnable",
+        "value": 0
+      },
+      {
+        "description": "disable openr link metric config",
+        "key": "openrParams.linkMetricConfig.enabled",
+        "value": false
+      }
+    ],
+    "ping_all_src_node_id": 2,
+    "ping_all_skip_node_ids": [],
+    "setup_tg_nodes_fig8": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "node_cfg_file_path": "/data/cfg/node_config.json"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "1": {
+    "e2e_controller": {
+      "topology": {
+        "nodes": [
+          {
+            "name": "porto-1",
+            "mac_addr": "fa:ce:b0:dd:67:08",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:da:20:fe"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "PORTO1"
+          },
+          {
+            "name": "porto-2",
+            "mac_addr": "fa:ce:b0:9f:de:22",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:21:ab:47"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PORTO2"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-porto-1-porto-2",
+            "a_node_mac": "fa:ce:b0:da:20:fe",
+            "a_node_name": "porto-1",
+            "z_node_mac": "fa:ce:b0:21:ab:47",
+            "z_node_name": "porto-2",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 34.96,
+              "altitude": 13.8,
+              "latitude": 37.484892833,
+              "longitude": -122.1473905
+            },
+            "name": "PORTO1"
+          },
+          {
+            "location": {
+              "accuracy": 30.21,
+              "altitude": 16.2,
+              "latitude": 37.484888333,
+              "longitude": -122.147392333
+            },
+            "name": "PORTO2"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "porto-1": {
+            "radioParamsOverride": {
+              "fa:ce:b0:da:20:fe": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "porto-2": {
+            "radioParamsOverride": {
+              "fa:ce:b0:21:ab:47": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

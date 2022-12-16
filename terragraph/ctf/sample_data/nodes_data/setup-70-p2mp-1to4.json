@@ -1,0 +1,98 @@
+{
+  "0": {
+    "setup": {
+      "name": "network3"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:33ef:f7::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:21db:95::",
+        "POP_STATIC_ROUTING": "1",
+        "VPP_ADDR": "2001:ebf9:5f::",
+        "POP_BGP_ROUTING": "0"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:d858:23::/58,64"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:e3:1e:bc",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:37:5c:01",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:d5:77:ce",
+          "respNodeType": "CN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:63:de:9e",
+          "respNodeType": "CN"
+        }
+      ]
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:d1a7:6a::/64"
+        }
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:c9fb:5f::/64"
+        }
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:b0ad:9c::/64"
+        }
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:8c72:18::/64"
+        }
+      }
+    }
+  }
+}

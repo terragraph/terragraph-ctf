@@ -1,0 +1,23 @@
+{
+  "fail_link": {
+    "name": "link-MPK_18-57-MPK_18-61_CN",
+    "initiator_mac": "fa:ce:b0:a5:52:3b",
+    "responder_mac": "fa:ce:b0:ea:c6:b0"
+  },
+  "fail_node": {
+    "id": 14,
+    "name": "MPK_18-49"
+  },
+  "expected_offline_network": {
+    "nodes": [
+      "MPK_18-49",
+      "MPK_18-61_CN"
+    ],
+    "links": [
+      "link-MPK_18-49-POP_MPK_Roof_16",
+      "link-MPK_18-48-MPK_18-49",
+      "link-MPK_18-44-MPK_18-49",
+      "link-MPK_18-57-MPK_18-61_CN"
+    ]
+  }
+}

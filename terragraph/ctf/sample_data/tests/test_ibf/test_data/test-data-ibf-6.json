@@ -1,0 +1,14 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_IBF-P2P-6 OFF BORE SIGHT BEAM SELECTION",
+    "test_description": "Ignite a P2P link that is off bore-sight and check beam."
+  },
+  "test_details": {
+    "ibf_test_id": 2,
+    "dn_initiator_id": 1,
+    "dn_responder_id": 2,
+    "dn_initiator_mac": "fa:ce:b0:18:aa:95",
+    "dn_responder_mac": "fa:ce:b0:f3:6e:b3",
+    "grep_key": "txBeam"
+  }
+}

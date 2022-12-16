@@ -1,0 +1,105 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GPS_6-5: MultiHop Different Sector",
+    "test_description": " Run on 4-Sector Rooftop. Test GPS sync over multi-hops, when nodes are connected to different sectors of the DN"
+  },
+  "e2e_ignition_config": {
+    "continue_on_failure": false,
+    "negate_result": false,
+    "ignition_timeout_s": 600
+  },
+  "flap_gps_order": [
+    {
+      "step_name": "1. stop gpsd (Disable GPS) on CN1 and DN1 : recheck if all the links are up",
+      "node_ids": [
+        3,
+        4
+      ],
+      "switch_state": false,
+      "check_links": [
+        {
+          "expected_link": "all",
+          "expected_link_state": true
+        }
+      ]
+    },
+    {
+      "step_name": "2. Disable GPS on DN0 : confirm DN0 \u2194DN1 and DN0 \u2194 CN1 are dropped",
+      "node_ids": [
+        1
+      ],
+      "switch_state": false,
+      "check_links": [
+        {
+          "expected_link": "link-Star-2B-Pop-Star-2D",
+          "expected_link_state": false
+        },
+        {
+          "expected_link": "link-Star-2B-Pop-Star-2C",
+          "expected_link_state": false
+        }
+      ]
+    },
+    {
+      "step_name": "3. Enable GPS on DN0 and DN1 : recheck if all the links are up",
+      "node_ids": [
+        1,
+        4
+      ],
+      "switch_state": true,
+      "check_links": [
+        {
+          "expected_link": "all",
+          "expected_link_state": true
+        }
+      ]
+    },
+    {
+      "step_name": "4. Disable GPS on DN0 : verify link to CN1 is dropped & remaining 2 links stay up ",
+      "node_ids": [
+        1
+      ],
+      "switch_state": false,
+      "check_links": [
+        {
+          "expected_link": "link-Star-2B-Pop-Star-2C",
+          "expected_link_state": false
+        },
+        {
+          "expected_link": "link-Star-2B-Pop-Star-2D",
+          "expected_link_state": true
+        },
+        {
+          "expected_link": "link-Star-2B-Pop-Star-2F",
+          "expected_link_state": true
+        }
+      ]
+    },
+    {
+      "step_name": "5. Enable GPS on DN0 : recheck if all the links are up",
+      "node_ids": [
+        1
+      ],
+      "switch_state": true,
+      "check_links": [
+        {
+          "expected_link": "all",
+          "expected_link_state": true
+        }
+      ]
+    },
+    {
+      "step_name": "6. Disable GPS on DN2 : verify all links stay up",
+      "node_ids": [
+        5
+      ],
+      "switch_state": false,
+      "check_links": [
+        {
+          "expected_link": "all",
+          "expected_link_state": true
+        }
+      ]
+    }
+  ]
+}

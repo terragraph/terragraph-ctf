@@ -1,0 +1,619 @@
+{
+  "0": {
+    "setup": {
+      "name": "network2"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      },
+      "bgpParams": {
+        "localAsn": 65101,
+        "neighbors": {
+          "0": {
+            "asn": 65100,
+            "ipv6": "2001:c04a:ac::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:1f42:33::/61"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:5437:0d::]:7007",
+        "e2e-network-prefix": "2001:1f42:33::/61,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:c04a:ac::",
+        "POP_ADDR": "2001:5e90:67::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:a182:86::"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "6": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "7": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "name": "configuration-133",
+        "nodes": [
+          {
+            "name": "IF-TWRG-DN544",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:d0:1b:ef",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:e6:55:c3",
+              "fa:ce:b0:80:5c:59",
+              "fa:ce:b0:da:53:91",
+              "fa:ce:b0:6e:d2:47"
+            ],
+            "site_name": "DN544",
+            "ant_azimuth": 0,
+            "ant_elevation": 0
+          },
+          {
+            "name": "IF-TWRG-DN545",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:e6:10:fc",
+            "pop_node": true,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:ab:1d:c5",
+              "fa:ce:b0:45:d2:ac",
+              "fa:ce:b0:eb:71:80",
+              "fa:ce:b0:70:6d:c6"
+            ],
+            "site_name": "DN545",
+            "ant_azimuth": 0,
+            "ant_elevation": 0
+          },
+          {
+            "name": "IF-TWRG-DN554",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:72:de:00",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:88:c1:69",
+              "fa:ce:b0:0b:15:ef",
+              "fa:ce:b0:80:00:7a",
+              "fa:ce:b0:aa:d2:fc"
+            ],
+            "site_name": "DN554",
+            "ant_azimuth": 0,
+            "ant_elevation": 0
+          },
+          {
+            "name": "IF-TWRG-DN555",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:4f:38:1c",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:c9:19:1a",
+              "fa:ce:b0:ac:41:57",
+              "fa:ce:b0:1f:40:99",
+              "fa:ce:b0:ca:eb:83"
+            ],
+            "site_name": "DN555",
+            "ant_azimuth": 0,
+            "ant_elevation": 0
+          },
+          {
+            "name": "IF-TWRG-DN546",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:09:75:1e",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:8a:85:33",
+              "fa:ce:b0:b1:00:a9",
+              "fa:ce:b0:00:b9:3e",
+              "fa:ce:b0:c2:05:7c"
+            ],
+            "site_name": "DN546",
+            "ant_azimuth": 0
+          },
+          {
+            "name": "IF-TWRG-DN556",
+            "node_type": 2,
+            "is_primary": true,
+            "mac_addr": "fa:ce:b0:31:77:ba",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:3f:8f:ae",
+              "fa:ce:b0:64:ae:dd",
+              "fa:ce:b0:a0:ec:4b",
+              "fa:ce:b0:84:b6:6e"
+            ],
+            "site_name": "DN556",
+            "ant_azimuth": 0,
+            "ant_elevation": 0
+          }
+        ],
+        "links": [
+          {
+            "name": "link-IF-TWRG-DN544-IF-TWRG-DN545",
+            "a_node_name": "IF-TWRG-DN544",
+            "z_node_name": "IF-TWRG-DN545",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:6e:d2:47",
+            "z_node_mac": "fa:ce:b0:70:6d:c6"
+          },
+          {
+            "name": "link-IF-TWRG-DN544-IF-TWRG-DN554",
+            "a_node_name": "IF-TWRG-DN544",
+            "z_node_name": "IF-TWRG-DN554",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:e6:55:c3",
+            "z_node_mac": "fa:ce:b0:80:00:7a"
+          },
+          {
+            "name": "link-IF-TWRG-DN545-IF-TWRG-DN555",
+            "a_node_name": "IF-TWRG-DN545",
+            "z_node_name": "IF-TWRG-DN555",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:ab:1d:c5",
+            "z_node_mac": "fa:ce:b0:1f:40:99"
+          },
+          {
+            "name": "link-IF-TWRG-DN545-IF-TWRG-DN546",
+            "a_node_name": "IF-TWRG-DN545",
+            "z_node_name": "IF-TWRG-DN546",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:45:d2:ac",
+            "z_node_mac": "fa:ce:b0:b1:00:a9"
+          },
+          {
+            "name": "link-IF-TWRG-DN546-IF-TWRG-DN556",
+            "a_node_name": "IF-TWRG-DN546",
+            "z_node_name": "IF-TWRG-DN556",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:8a:85:33",
+            "z_node_mac": "fa:ce:b0:a0:ec:4b"
+          },
+          {
+            "name": "link-IF-TWRG-DN555-IF-TWRG-DN556",
+            "a_node_name": "IF-TWRG-DN555",
+            "z_node_name": "IF-TWRG-DN556",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:ac:41:57",
+            "z_node_mac": "fa:ce:b0:64:ae:dd"
+          },
+          {
+            "name": "link-IF-TWRG-DN554-IF-TWRG-DN555",
+            "a_node_name": "IF-TWRG-DN554",
+            "z_node_name": "IF-TWRG-DN555",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:aa:d2:fc",
+            "z_node_mac": "fa:ce:b0:ca:eb:83"
+          }
+        ],
+        "sites": [
+          {
+            "name": "DN544",
+            "location": {
+              "latitude": 37.55353,
+              "longitude": -122.065688333,
+              "altitude": 9.77,
+              "accuracy": 28.5
+            }
+          },
+          {
+            "name": "DN545",
+            "location": {
+              "latitude": 37.553523333,
+              "longitude": -122.065701667,
+              "altitude": 7.94,
+              "accuracy": 28.5
+            }
+          },
+          {
+            "name": "DN554",
+            "location": {
+              "latitude": 37.553511667,
+              "longitude": -122.065696667,
+              "altitude": 6.84,
+              "accuracy": 26.6
+            }
+          },
+          {
+            "name": "DN555",
+            "location": {
+              "latitude": 37.553523333,
+              "longitude": -122.06569,
+              "altitude": 7.92,
+              "accuracy": 28.5
+            }
+          },
+          {
+            "name": "DN546",
+            "location": {
+              "latitude": 37.553515,
+              "longitude": -122.06569,
+              "altitude": 6.63,
+              "accuracy": 28.5
+            }
+          },
+          {
+            "name": "DN556",
+            "location": {
+              "latitude": 37.553503333,
+              "longitude": -122.065686667,
+              "altitude": 12.42,
+              "accuracy": 28.5
+            }
+          }
+        ],
+        "config": {}
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "IF-TWRG-DN544": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:70:6d:c6": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:80:00:7a": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:e6:55:c3": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:6e:d2:47": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "IF-TWRG-DN545": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:6e:d2:47": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:b1:00:a9": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:1f:40:99": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:ab:1d:c5": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:45:d2:ac": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:70:6d:c6": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "IF-TWRG-DN546": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:45:d2:ac": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:a0:ec:4b": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:8a:85:33": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:b1:00:a9": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "IF-TWRG-DN554": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:e6:55:c3": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:ca:eb:83": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:80:00:7a": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:aa:d2:fc": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "IF-TWRG-DN555": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:ab:1d:c5": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:64:ae:dd": {
+                "fwParams": {
+                  "controlSuperframe": 1,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:aa:d2:fc": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:ac:41:57": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:1f:40:99": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:ca:eb:83": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "IF-TWRG-DN556": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:8a:85:33": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:ac:41:57": {
+                "fwParams": {
+                  "controlSuperframe": 1,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:64:ae:dd": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:a0:ec:4b": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:1f42:33::/61"
+          }
+        },
+        "node_config_overrides": {
+          "IF-TWRG-DN545": {
+            "bgpParams": {
+              "localAsn": 65101,
+              "neighbors": {
+                "0": {
+                  "asn": 65100,
+                  "ipv6": "2001:c04a:ac::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:1f42:33::/61"
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:5437:0d::]:7007",
+              "e2e-network-prefix": "2001:1f42:33::/61,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:c04a:ac::",
+              "POP_ADDR": "2001:5e90:67::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "VPP_ADDR": "2001:a182:86::"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "VPP_USE_EEPROM_MACS": "1"
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

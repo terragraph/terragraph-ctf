@@ -1,0 +1,37 @@
+{
+  "test_meta_info": {
+    "test_code": "E2E-2P_1",
+    "test_code_description": "Reboot pop Node(s) and recheck e2e network"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "radioParamsBase": {
+        "fwStatsConfig": {
+          "TGF_STATS_BF": true,
+          "TGF_STATS_BF_SCAN": true,
+          "TGF_STATS_MTPO": true
+        }
+      }
+    }
+  },
+  "test_options": {
+    "action_iterations": 1,
+    "action": "rest_api_reboot_node",
+    "action_data": {
+      "nodes": [
+        "IF-TWRG-DN545"
+      ],
+      "force": true,
+      "secondsToReboot": 60
+    },
+    "action_node_ids": [
+      2
+    ],
+    "ping_all_src_node_id": 2,
+    "ping_all_skip_node_ids": []
+  }
+}

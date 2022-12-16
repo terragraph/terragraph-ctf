@@ -1,0 +1,92 @@
+{
+  "test_meta_info": {
+    "test_code": "LA2.2",
+    "test_code_description": "The purpose of this test to ensure that LA quickly adapts the MCS in response to high attenuation and maintains PER within the acceptable range."
+  },
+  "test_details": {
+    "dn_initiator_id": 1,
+    "dn_responder_id_1": 2,
+    "dn_responder_id_2": 3,
+    "attenuator_id": 8
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    },
+    "3": {
+      "node_config": {
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 12,
+            "tpcEnable": 0
+          }
+        }
+      }
+    }
+  },
+  "test_options": {
+    "ramp_up": {
+      "cmd": "nohup /home/odroid/coffin/Steel_Coffin_Ramp_up.sh  > /tmp/dump3.txt &",
+      "node_ids": [
+        8
+      ]
+    },
+    "ramp_down": {
+      "cmd": "nohup /home/odroid/coffin/Steel_Coffin_Ramp_up.sh  > /tmp/dump3.txt &",
+      "node_ids": [
+        8
+      ]
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 5,
+      "from_netns": "eth7",
+      "to_netns": "eth6",
+      "bandwidth": 625,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.01
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1428",
+      "time": 600
+    },
+    {
+      "from_device_id": 4,
+      "to_device_id": 6,
+      "from_netns": "eth7",
+      "to_netns": "eth5",
+      "bandwidth": 625,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 0.01
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1428",
+      "time": 600
+    }
+  ]
+}

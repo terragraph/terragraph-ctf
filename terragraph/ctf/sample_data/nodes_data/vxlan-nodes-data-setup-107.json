@@ -1,0 +1,279 @@
+{
+  "3": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:71:ba:80",
+          "responder_mac": "fa:ce:b0:12:69:dc",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "tunnel_destinations": [
+      4
+    ],
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "CPE_IFACE_IP_PREFIX": "2001:9006:7c::/64",
+        "CPE_INTERFACE": "TenGigabitEthernet0"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:83c2:8d::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:d28c:51::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:2ed8:55::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65124,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:d28c:51::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:eae7:3d::/60"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:eae7:3d::/60,64",
+        "e2e-ctrl-url": "tcp://[2001:1cec:50::]:7007"
+      },
+      "radioParamsBase": {
+        "fwStatsConfig": {
+          "TGF_STATS_BF": true,
+          "TGF_STATS_MTPO": true,
+          "TGF_STATS_BF_SCAN": true
+        }
+      }
+    },
+    "tunnelConfig": {
+      "12-Roof-South": {
+        "enabled": true,
+        "localInterface": "TenGigabitEthernet0",
+        "dstIp": "2001:5af4:97::",
+        "dstNodeName": "12-Roof-South",
+        "tunnelType": "VXLAN",
+        "tunnelParams": {
+          "vlanId": 100
+        }
+      }
+    }
+  },
+  "4": {
+    "tunnel_destinations": [
+      3
+    ],
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "CPE_IFACE_IP_PREFIX": "2001:67a6:43::/64",
+        "CPE_INTERFACE": "TenGigabitEthernet0"
+      }
+    },
+    "tunnelConfig": {
+      "10-Roof-East": {
+        "enabled": true,
+        "localInterface": "TenGigabitEthernet0",
+        "dstIp": "2001:eae7:3d::1",
+        "dstNodeName": "10-Roof-East",
+        "tunnelType": "VXLAN",
+        "tunnelParams": {
+          "vlanId": 100
+        }
+      }
+    }
+  },
+  "5": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "name": "mpk-dryrun-01",
+        "nodes": [
+          {
+            "name": "10-Roof-East",
+            "site_name": "10-Roof-East",
+            "mac_addr": "fa:ce:b0:80:35:12",
+            "node_type": 2,
+            "pop_node": true,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:71:ba:80",
+              "fa:ce:b0:b2:b1:db",
+              "fa:ce:b0:e5:53:6f",
+              "fa:ce:b0:df:ad:36"
+            ]
+          },
+          {
+            "name": "12-Roof-South",
+            "site_name": "12-Roof-South",
+            "mac_addr": "fa:ce:b0:cb:05:26",
+            "node_type": 2,
+            "pop_node": false,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:3a:22:8b",
+              "fa:ce:b0:12:69:dc",
+              "fa:ce:b0:ff:dd:c3",
+              "fa:ce:b0:d7:9b:7b"
+            ]
+          }
+        ],
+        "links": [
+          {
+            "name": "link-10-Roof-East-12-Roof-South",
+            "a_node_mac": "fa:ce:b0:71:ba:80",
+            "a_node_name": "10-Roof-East",
+            "link_type": 1,
+            "z_node_mac": "fa:ce:b0:12:69:dc",
+            "z_node_name": "12-Roof-South"
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 26.6,
+              "altitude": 3.56,
+              "latitude": 37.48354,
+              "longitude": -122.149771667
+            },
+            "name": "10-Roof-East"
+          },
+          {
+            "location": {
+              "accuracy": 19,
+              "altitude": 10.92,
+              "latitude": 37.484496667,
+              "longitude": -122.149053333
+            },
+            "name": "12-Roof-South"
+          }
+        ]
+      },
+      "configs": {
+        "controller_config": {
+          "flags": {
+            "bt_tracker_ipv6_global_addressable_ifname": "ens160",
+            "enable_centralized_prefix_alloc": "true",
+            "v": "2"
+          },
+          "ignitionParams": {
+            "enable": true
+          },
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:eae7:3d::/60"
+          }
+        },
+        "node_config_overrides": {
+          "10-Roof-East": {
+            "bgpParams": {
+              "localAsn": 65124,
+              "neighbors": {
+                "0": {
+                  "asn": 65123,
+                  "ipv6": "2001:d28c:51::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:eae7:3d::/60"
+            },
+            "envParams": {
+              "FW_LOGGING_ENABLED": "1",
+              "FW_LOG_VERBOSE": "4",
+              "CPE_IFACE_IP_PREFIX": "2001:9006:7c::/64",
+              "CPE_INTERFACE": "TenGigabitEthernet0"
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:1cec:50::]:7007",
+              "e2e-network-prefix": "2001:eae7:3d::/60,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:d28c:51::",
+              "POP_ADDR": "2001:83c2:8d::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:2ed8:55::"
+            },
+            "radioParamsBase": {
+              "fwStatsConfig": {
+                "TGF_STATS_BF": true,
+                "TGF_STATS_MTPO": true,
+                "TGF_STATS_BF_SCAN": true
+              }
+            },
+            "tunnelConfig": {
+              "12-Roof-South": {
+                "enabled": true,
+                "localInterface": "TenGigabitEthernet0",
+                "dstIp": "2001:5af4:97::",
+                "dstNodeName": "12-Roof-South",
+                "tunnelType": "VXLAN",
+                "tunnelParams": {
+                  "vlanId": 100
+                }
+              }
+            }
+          },
+          "12-Roof-South": {
+            "envParams": {
+              "FW_LOGGING_ENABLED": "1",
+              "FW_LOG_VERBOSE": "4",
+              "CPE_IFACE_IP_PREFIX": "2001:67a6:43::/64",
+              "CPE_INTERFACE": "TenGigabitEthernet0"
+            },
+            "tunnelConfig": {
+              "10-Roof-East": {
+                "enabled": true,
+                "localInterface": "TenGigabitEthernet0",
+                "dstIp": "2001:eae7:3d::1",
+                "dstNodeName": "10-Roof-East",
+                "tunnelType": "VXLAN",
+                "tunnelParams": {
+                  "vlanId": 100
+                }
+              }
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "radioParamsBase": {
+            "fwStatsConfig": {
+              "TGF_STATS_BF": true,
+              "TGF_STATS_BF_SCAN": true,
+              "TGF_STATS_MTPO": true
+            }
+          },
+          "statsAgentParams": {
+            "endpointParams": {
+              "kafkaParams": {
+                "enabled": true
+              },
+              "nmsPublisherParams": {
+                "enabled": false
+              }
+            }
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  },
+  "6": {
+    "traffic_gen": {
+      "server_id": 6,
+      "client_id": 7
+    },
+    "port_name": "enp7s0"
+  },
+  "7": {
+    "port_name": "enp7s0"
+  }
+}

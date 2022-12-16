@@ -1,0 +1,43 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GOLAY-1",
+    "test_code_description": "Test p2p link with different golay indexes using tg minion assoc cmd"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0,
+          "forceGpsDisable": 1
+        }
+      }
+    }
+  },
+  "test_options": {
+    "selected_link": {
+      "initiator_id": 1,
+      "responder_id": 2,
+      "initiator_mac": "fa:ce:b0:8f:25:03",
+      "responder_mac": "fa:ce:b0:b7:83:d3",
+      "respNodeType": "DN",
+      "golays": [
+        {
+          "rxGolayIdx": 0,
+          "txGolayIdx": 0
+        },
+        {
+          "rxGolayIdx": 1,
+          "txGolayIdx": 1
+        },
+        {
+          "rxGolayIdx": 2,
+          "txGolayIdx": 2
+        },
+        {
+          "rxGolayIdx": 3,
+          "txGolayIdx": 3
+        }
+      ]
+    }
+  }
+}

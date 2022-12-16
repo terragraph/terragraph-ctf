@@ -1,0 +1,37 @@
+{
+  "0": {
+    "setup": {
+      "name": "network8"
+    }
+  },
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:72:60:73",
+          "responder_mac": "fa:ce:b0:c7:f2:f5",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "71::/64"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "68::/64"
+      }
+    }
+  }
+}

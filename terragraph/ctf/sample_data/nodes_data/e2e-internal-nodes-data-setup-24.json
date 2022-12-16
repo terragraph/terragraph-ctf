@@ -1,0 +1,85 @@
+{
+  "1": {
+    "e2e_controller": {
+      "topology": {
+        "nodes": [
+          {
+            "name": "puma5.benchtop",
+            "mac_addr": "fa:ce:b0:fd:88:9c",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:84:ce:2c"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "PUMA5"
+          },
+          {
+            "name": "puma10b.benchtop",
+            "mac_addr": "fa:ce:b0:cd:89:72",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:c5:f1:3c"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "PUMA10B"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-puma10b.benchtop-puma5.benchtop",
+            "a_node_mac": "fa:ce:b0:c5:f1:3c",
+            "a_node_name": "puma10b.benchtop",
+            "z_node_mac": "fa:ce:b0:84:ce:2c",
+            "z_node_name": "puma5.benchtop",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 36.1,
+              "altitude": 8.21,
+              "latitude": 37.484886667,
+              "longitude": -122.147405
+            },
+            "name": "PUMA5"
+          },
+          {
+            "location": {
+              "accuracy": 36.1,
+              "altitude": 8.21,
+              "latitude": 37.484886667,
+              "longitude": -122.147405
+            },
+            "name": "PUMA10B"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "puma5.benchtop": {
+            "radioParamsOverride": {
+              "fa:ce:b0:84:ce:2c": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "puma10b.benchtop": {
+            "radioParamsOverride": {
+              "fa:ce:b0:c5:f1:3c": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "2": {}
+}

@@ -1,0 +1,551 @@
+{
+  "0": {
+    "setup": {
+      "name": "network13"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "bgpParams": {
+        "localAsn": 65128,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:c662:38::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:ae4f:be::/59"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:fa1c:f6::]:7007",
+        "e2e-network-prefix": "2001:ae4f:be::/59,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:c662:38::",
+        "POP_ADDR": "2001:732b:cc::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:ecd9:f6::"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      }
+    }
+  },
+  "6": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "bgpParams": {
+        "localAsn": 65128,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:c662:38::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:ae4f:be::/59"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:fa1c:f6::]:7007",
+        "e2e-network-prefix": "2001:ae4f:be::/59,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:c662:38::",
+        "POP_ADDR": "2001:9233:7c::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:96d8:a2::"
+      }
+    }
+  },
+  "13": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "name": "configuration-81",
+        "nodes": [
+          {
+            "name": "MPK-FIG8_10.20",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:a7:22:34",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:5e:50:aa",
+              "fa:ce:b0:58:42:38",
+              "fa:ce:b0:8f:25:03",
+              "fa:ce:b0:71:94:60"
+            ],
+            "site_name": "A",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:ae4f:be::/64"
+          },
+          {
+            "name": "MPK-FIG8_10.x",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:e5:8d:78",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a9:36:6f",
+              "fa:ce:b0:86:2d:6f",
+              "fa:ce:b0:87:c9:da",
+              "fa:ce:b0:0d:d9:db"
+            ],
+            "site_name": "C",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:a939:f1::/64"
+          },
+          {
+            "name": "MPK-FIG8_12.03",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:fd:31:b7",
+            "pop_node": true,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:39:cc:c1",
+              "fa:ce:b0:13:ef:c4",
+              "fa:ce:b0:a3:0e:88",
+              "fa:ce:b0:ea:d4:ef"
+            ],
+            "site_name": "D",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:3119:0a::/64"
+          },
+          {
+            "name": "MPK-FIG8_10.17",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:ab:62:4c",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:aa:3d:7f",
+              "fa:ce:b0:7a:89:4c",
+              "fa:ce:b0:7c:02:65",
+              "fa:ce:b0:2a:e1:43"
+            ],
+            "site_name": "E",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:3f9d:cb::/64"
+          },
+          {
+            "name": "MPK-FIG8_10.11",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:64:ca:ec",
+            "pop_node": true,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:97:4f:17",
+              "fa:ce:b0:f1:e9:6d",
+              "fa:ce:b0:ab:31:fe",
+              "fa:ce:b0:76:a9:af"
+            ],
+            "site_name": "F",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:d397:41::/64"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-MPK-FIG8_10.x-MPK-FIG8_12.03",
+            "a_node_name": "MPK-FIG8_10.x",
+            "z_node_name": "MPK-FIG8_12.03",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:87:c9:da",
+            "z_node_mac": "fa:ce:b0:ea:d4:ef"
+          },
+          {
+            "name": "link-MPK-FIG8_10.17-MPK-FIG8_12.03",
+            "a_node_name": "MPK-FIG8_10.17",
+            "z_node_name": "MPK-FIG8_12.03",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:aa:3d:7f",
+            "z_node_mac": "fa:ce:b0:39:cc:c1"
+          },
+          {
+            "name": "link-MPK-FIG8_10.11-MPK-FIG8_10.17",
+            "a_node_name": "MPK-FIG8_10.11",
+            "z_node_name": "MPK-FIG8_10.17",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:76:a9:af",
+            "z_node_mac": "fa:ce:b0:7a:89:4c"
+          },
+          {
+            "name": "link-MPK-FIG8_10.11-MPK-FIG8_10.20",
+            "a_node_name": "MPK-FIG8_10.11",
+            "z_node_name": "MPK-FIG8_10.20",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:97:4f:17",
+            "z_node_mac": "fa:ce:b0:5e:50:aa"
+          }
+        ],
+        "sites": [
+          {
+            "name": "A",
+            "location": {
+              "latitude": 37.4838,
+              "longitude": -122.151,
+              "altitude": 6.2,
+              "accuracy": 5
+            }
+          },
+          {
+            "name": "C",
+            "location": {
+              "latitude": 37.4845,
+              "longitude": -122.1508,
+              "altitude": 6.2,
+              "accuracy": 5
+            }
+          },
+          {
+            "name": "D",
+            "location": {
+              "latitude": 37.4843,
+              "longitude": -122.1502,
+              "altitude": 3.2,
+              "accuracy": 5
+            }
+          },
+          {
+            "name": "E",
+            "location": {
+              "latitude": 37.4841,
+              "longitude": -122.1504,
+              "altitude": 1.3,
+              "accuracy": 5
+            }
+          },
+          {
+            "name": "F",
+            "location": {
+              "latitude": 37.4834,
+              "longitude": -122.1505,
+              "altitude": 2.02,
+              "accuracy": 5
+            }
+          }
+        ],
+        "config": {}
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "MPK-FIG8_10.20": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:97:4f:17": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:b7:83:d3": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:8f:25:03": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:5e:50:aa": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "MPK-FIG8_10.x": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:ea:d4:ef": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:08:75:4a": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a9:36:6f": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:87:c9:da": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "MPK-FIG8_12.03": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:ae4f:be::/59"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:aa:3d:7f": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:87:c9:da": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:39:cc:c1": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:ea:d4:ef": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "MPK-FIG8_10.17": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:39:cc:c1": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:ae:df:59": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:76:a9:af": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:aa:3d:7f": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:7c:02:65": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:7a:89:4c": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "MPK-FIG8_10.11": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:ae4f:be::/59"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:5e:50:aa": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:7a:89:4c": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:97:4f:17": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:76:a9:af": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "flags": {
+            "enable_centralized_prefix_alloc": "true",
+            "enable_deterministic_prefix_alloc": "false",
+            "v": "3"
+          },
+          "ignitionParams": {
+            "enable": true
+          },
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:ae4f:be::/59"
+          }
+        },
+        "node_config_overrides": {
+          "MPK-FIG8_10.11": {
+            "bgpParams": {
+              "localAsn": 65128,
+              "neighbors": {
+                "0": {
+                  "asn": 65123,
+                  "ipv6": "2001:c662:38::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:ae4f:be::/59"
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:fa1c:f6::]:7007",
+              "e2e-network-prefix": "2001:ae4f:be::/59,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:c662:38::",
+              "POP_ADDR": "2001:9233:7c::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "VPP_ADDR": "2001:96d8:a2::"
+            }
+          },
+          "MPK-FIG8_12.03": {
+            "bgpParams": {
+              "localAsn": 65128,
+              "neighbors": {
+                "0": {
+                  "asn": 65123,
+                  "ipv6": "2001:c662:38::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:ae4f:be::/59"
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:fa1c:f6::]:7007",
+              "e2e-network-prefix": "2001:ae4f:be::/59,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:c662:38::",
+              "POP_ADDR": "2001:732b:cc::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "VPP_ADDR": "2001:ecd9:f6::"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1",
+            "FW_LOG_VERBOSE": "4"
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

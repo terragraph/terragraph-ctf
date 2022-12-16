@@ -1,0 +1,136 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_E2E_IGN_P2MP_MPK",
+    "test_code_description": "Attempt ignition."
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 14,
+      "to_device_id": 15,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 16,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 17,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 18,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 19,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5010,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 20,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5012,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 21,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5014,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 14,
+      "to_device_id": 22,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5016,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    }
+  ]
+}

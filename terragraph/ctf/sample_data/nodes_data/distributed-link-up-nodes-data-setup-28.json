@@ -1,0 +1,528 @@
+{
+  "1": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:a9:11:e2": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:37:c9:02": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:a7:61:84": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:e4:66:24": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:a9:11:e2": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:e4:66:24",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:37:c9:02": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:a7:61:84",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma39.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:a7:61:84": {
+            "distributedIgnitionColor": 0
+          },
+          "fa:ce:b0:e4:66:24": {
+            "distributedIgnitionColor": 2
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA39"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:9e:23:a2": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:a7:61:84": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:37:c9:02": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:99:70:88": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:9e:23:a2": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:99:70:88",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:a7:61:84": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:37:c9:02",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma38.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:37:c9:02": {
+            "distributedIgnitionColor": 1
+          },
+          "fa:ce:b0:99:70:88": {
+            "distributedIgnitionColor": 3
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA38"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:d5:ba:38": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:de:dd:87": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:e4:66:24": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:a9:11:e2": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:1c:27:1d": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:fa:b0:07": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:d5:ba:38": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:1c:27:1d",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:de:dd:87": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:fa:b0:07",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:e4:66:24": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:a9:11:e2",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma15.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:a9:11:e2": {
+            "distributedIgnitionColor": 1
+          },
+          "fa:ce:b0:1c:27:1d": {
+            "distributedIgnitionColor": 3
+          },
+          "fa:ce:b0:fa:b0:07": {
+            "distributedIgnitionColor": 1
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA15"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:1c:27:1d": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:34:5c:3f": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:99:70:88": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:d5:ba:38": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:9e:23:a2": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:cc:61:25": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:1c:27:1d": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:d5:ba:38",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:34:5c:3f": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:cc:61:25",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:99:70:88": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:9e:23:a2",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma34.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:d5:ba:38": {
+            "distributedIgnitionColor": 0
+          },
+          "fa:ce:b0:9e:23:a2": {
+            "distributedIgnitionColor": 0
+          },
+          "fa:ce:b0:cc:61:25": {
+            "distributedIgnitionColor": 2
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA34"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:fa:b0:07": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:a7:61:e2": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 1,
+            "txGolayIdx": 1
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:de:dd:87": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:f6:5b:16": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:fa:b0:07": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:de:dd:87",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:a7:61:e2": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 1,
+              "txGolayIdx": 1
+            },
+            "initiatorMac": "fa:ce:b0:f6:5b:16",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma14.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:de:dd:87": {
+            "distributedIgnitionColor": 2
+          },
+          "fa:ce:b0:f6:5b:16": {
+            "distributedIgnitionColor": 0
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA14"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  },
+  "6": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:cc:61:25": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:f6:5b:16": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 1,
+            "txGolayIdx": 1
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:34:5c:3f": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:a7:61:e2": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:cc:61:25": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:34:5c:3f",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:f6:5b:16": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 1,
+              "txGolayIdx": 1
+            },
+            "initiatorMac": "fa:ce:b0:a7:61:e2",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma37.benchtop",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:34:5c:3f": {
+            "distributedIgnitionColor": 3
+          },
+          "fa:ce:b0:a7:61:e2": {
+            "distributedIgnitionColor": 1
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 28.5,
+            "altitude": 13.57,
+            "latitude": 37.484861667,
+            "longitude": -122.147388333
+          },
+          "name": "PUMA37"
+        },
+        "topologyName": "Puma IF Figure 8"
+      }
+    }
+  }
+}

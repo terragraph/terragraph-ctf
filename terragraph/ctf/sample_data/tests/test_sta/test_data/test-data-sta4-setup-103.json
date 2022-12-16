@@ -1,0 +1,31 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_STA4",
+    "test_code_description": "Stability test with burst traffic every hour"
+  },
+  "stability_profile": {
+    "total_time": 28800,
+    "split_iperf_time": 7200,
+    "burst_mode_delay": 3600,
+    "burst_mode_time": 900,
+    "burst_mode_bandwidth": 3000
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth6",
+      "to_netns": "eth7",
+      "bandwidth": 1000,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 10.0
+      },
+      "port": 5102,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 7200
+    }
+  ]
+}

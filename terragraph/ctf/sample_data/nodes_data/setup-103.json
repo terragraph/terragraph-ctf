@@ -1,0 +1,247 @@
+{
+  "0": {
+    "setup": {
+      "name": "network11"
+    }
+  },
+  "1": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:f80b:84::/64"
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:e340:c3::]:7007",
+        "e2e-network-prefix": "2001:aff9:99::/61,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:0924:d3::",
+        "NAT64_IPV4_ADDR": "",
+        "NAT64_IPV6_PREFIX": "",
+        "NAT64_POP_ENABLED": "0",
+        "POP_ADDR": "2001:429e:d5::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:08b6:2d::"
+      },
+      "bgpParams": {
+        "localAsn": 65517,
+        "neighbors": {
+          "0": {
+            "asn": 65075,
+            "ipv6": "2001:0924:d3::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:aff9:99::/61,2001:f80b:84::/64"
+      }
+    }
+  },
+  "3": {
+    "traffic_gen": {
+      "server_id": 3,
+      "client_id": 4
+    },
+    "port_name": "eth6"
+  },
+  "4": {
+    "port_name": "eth7"
+  },
+  "5": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "Puma_Pole30",
+            "mac_addr": "fa:ce:b0:37:80:92",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:b5:b4:38",
+              "fa:ce:b0:6f:df:14",
+              "fa:ce:b0:b9:69:4f",
+              "fa:ce:b0:d9:7c:4c"
+            ],
+            "pop_node": false,
+            "node_type": 1,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "B"
+          },
+          {
+            "name": "Puma_Pole34",
+            "mac_addr": "fa:ce:b0:e9:ee:af",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:96:be:2a",
+              "fa:ce:b0:cd:9b:7d",
+              "fa:ce:b0:4f:ce:cb",
+              "fa:ce:b0:dd:e0:02"
+            ],
+            "pop_node": true,
+            "node_type": 2,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "A"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-Puma_Pole30-Puma_Pole34",
+            "a_node_name": "Puma_Pole30",
+            "z_node_name": "Puma_Pole34",
+            "a_node_mac": "fa:ce:b0:b5:b4:38",
+            "z_node_mac": "fa:ce:b0:96:be:2a",
+            "is_alive": false,
+            "link_type": 1,
+            "linkup_attempts": 0
+          }
+        ],
+        "sites": [
+          {
+            "name": "B",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.0601,
+              "altitude": 0.0,
+              "accuracy": 60.0
+            }
+          },
+          {
+            "name": "A",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.06,
+              "altitude": 0.0,
+              "accuracy": 60.0
+            }
+          }
+        ],
+        "name": "configuration-103"
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "Puma_Pole30": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:aff9:99::/61"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:96:be:2a": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:b5:b4:38": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "Puma_Pole34": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:aff9:99::/61"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:b5:b4:38": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:96:be:2a": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:aff9:99::/61"
+          }
+        },
+        "node_config_overrides": {
+          "Puma_Pole34": {
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:e340:c3::]:7007",
+              "e2e-network-prefix": "2001:aff9:99::/61,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:0924:d3::",
+              "NAT64_IPV4_ADDR": "",
+              "NAT64_IPV6_PREFIX": "",
+              "NAT64_POP_ENABLED": "0",
+              "POP_ADDR": "2001:429e:d5::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:08b6:2d::"
+            },
+            "bgpParams": {
+              "localAsn": 65517,
+              "neighbors": {
+                "0": {
+                  "asn": 65075,
+                  "ipv6": "2001:0924:d3::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:aff9:99::/61,2001:f80b:84::/64"
+            }
+          },
+          "Puma_Pole30": {
+            "envParams": {
+              "CPE_IFACE_IP_PREFIX": "2001:f80b:84::/64",
+              "CPE_INTERFACE": "TenGigabitEthernet0"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "radioParamsBase": {
+            "fwStatsConfig": {
+              "TGF_STATS_BF": true,
+              "TGF_STATS_BF_SCAN": true,
+              "TGF_STATS_MTPO": true
+            }
+          },
+          "statsAgentParams": {
+            "endpointParams": {
+              "kafkaParams": {
+                "enabled": true
+              },
+              "nmsPublisherParams": {
+                "enabled": false
+              }
+            }
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

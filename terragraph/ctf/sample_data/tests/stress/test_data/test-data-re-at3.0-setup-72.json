@@ -1,0 +1,128 @@
+{
+  "test_meta_info": {
+    "test_code": "ReAT3.0",
+    "test_code_description": "super assoc between DN to fifteen CNs"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      }
+    }
+  },
+  "selected_links": [
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 2,
+      "responder_mac": "fa:ce:b0:96:01:59",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 3,
+      "responder_mac": "fa:ce:b0:b8:f7:ac",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 4,
+      "responder_mac": "fa:ce:b0:6a:a6:06",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 5,
+      "responder_mac": "fa:ce:b0:73:23:35",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 6,
+      "responder_mac": "fa:ce:b0:3f:b3:d5",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 7,
+      "responder_mac": "fa:ce:b0:f5:bc:c0",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 8,
+      "responder_mac": "fa:ce:b0:71:ef:af",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 9,
+      "responder_mac": "fa:ce:b0:1f:f1:f2",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 10,
+      "responder_mac": "fa:ce:b0:1d:b0:58",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 11,
+      "responder_mac": "fa:ce:b0:db:89:0d",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 12,
+      "responder_mac": "fa:ce:b0:56:29:85",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 13,
+      "responder_mac": "fa:ce:b0:1e:9d:18",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 14,
+      "responder_mac": "fa:ce:b0:dc:69:69",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 15,
+      "responder_mac": "fa:ce:b0:3f:36:58",
+      "respNodeType": "CN"
+    },
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:44:92:4c",
+      "responder_id": 16,
+      "responder_mac": "fa:ce:b0:dc:13:03",
+      "respNodeType": "CN"
+    }
+  ],
+  "test_options": {
+    "num_iterations": 20,
+    "delay_before_reassoc": 10,
+    "enable_random_disassoc": false,
+    "ping_interface": "terra"
+  }
+}

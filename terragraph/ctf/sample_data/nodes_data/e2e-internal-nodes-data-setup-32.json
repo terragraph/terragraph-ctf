@@ -1,0 +1,293 @@
+{
+  "1": {
+    "e2e_controller": {
+      "topology": {
+        "nodes": [
+          {
+            "name": "puma.ak66.assembled",
+            "mac_addr": "fa:ce:b0:40:0b:69",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:b2:1d:64",
+              "fa:ce:b0:b3:79:3d",
+              "fa:ce:b0:5b:98:42"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "SITE_1"
+          },
+          {
+            "name": "puma.nrg3.assembled",
+            "mac_addr": "fa:ce:b0:b6:05:a9",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:58:6a:d2",
+              "fa:ce:b0:e6:a9:94",
+              "fa:ce:b0:63:58:e3",
+              "fa:ce:b0:b0:97:b8"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2"
+          },
+          {
+            "name": "puma.nrg74.assembled",
+            "mac_addr": "fa:ce:b0:1e:ef:f6",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:2f:33:bc",
+              "fa:ce:b0:e1:05:c8",
+              "fa:ce:b0:5e:9e:89",
+              "fa:ce:b0:68:d3:98"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_3"
+          },
+          {
+            "name": "puma.nrg7.assembled",
+            "mac_addr": "fa:ce:b0:d5:a8:15",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:09:b3:c3",
+              "fa:ce:b0:cc:3c:6b",
+              "fa:ce:b0:6a:d7:5a",
+              "fa:ce:b0:ac:13:32"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_4"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-puma.ak66.assembled-puma.nrg3.assembled",
+            "a_node_mac": "fa:ce:b0:b3:79:3d",
+            "a_node_name": "puma.ak66.assembled",
+            "z_node_mac": "fa:ce:b0:e6:a9:94",
+            "z_node_name": "puma.nrg3.assembled",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma.ak66.assembled-puma.nrg7.assembled",
+            "a_node_mac": "fa:ce:b0:b2:1d:64",
+            "a_node_name": "puma.ak66.assembled",
+            "z_node_mac": "fa:ce:b0:6a:d7:5a",
+            "z_node_name": "puma.nrg7.assembled",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma.nrg3.assembled-puma.nrg74.assembled",
+            "a_node_mac": "fa:ce:b0:b0:97:b8",
+            "a_node_name": "puma.nrg3.assembled",
+            "z_node_mac": "fa:ce:b0:68:d3:98",
+            "z_node_name": "puma.nrg74.assembled",
+            "link_type": 1
+          },
+          {
+            "name": "link-puma.nrg7.assembled-puma.nrg74.assembled",
+            "a_node_mac": "fa:ce:b0:09:b3:c3",
+            "a_node_name": "puma.nrg7.assembled",
+            "z_node_mac": "fa:ce:b0:2f:33:bc",
+            "z_node_name": "puma.nrg74.assembled",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_1"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_2"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_3"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_4"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "puma.ak66.assembled": {
+            "linkParamsOverride": {
+              "fa:ce:b0:e6:a9:94": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:6a:d7:5a": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:b2:1d:64": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:b3:79:3d": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "puma.nrg3.assembled": {
+            "linkParamsOverride": {
+              "fa:ce:b0:b3:79:3d": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:68:d3:98": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:e6:a9:94": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:b0:97:b8": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "puma.nrg74.assembled": {
+            "linkParamsOverride": {
+              "fa:ce:b0:b0:97:b8": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:09:b3:c3": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:2f:33:bc": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:68:d3:98": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "puma.nrg7.assembled": {
+            "linkParamsOverride": {
+              "fa:ce:b0:b2:1d:64": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:2f:33:bc": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:09:b3:c3": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:6a:d7:5a": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

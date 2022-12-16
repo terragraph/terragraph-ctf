@@ -1,0 +1,521 @@
+{
+  "0": {
+    "setup": {
+      "name": "network1"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:aaeb:bf::/64"
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:938a:82::/64"
+        }
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:6039:7d::/64"
+        }
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:d619:e4::/64"
+        }
+      }
+    }
+  },
+  "6": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "bgpParams": {
+        "specificNetworkPrefixes": "2001:9651:73::/58"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:6e43:5f::]:7007",
+        "e2e-network-prefix": "2001:9651:73::/58,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:dc07:36::",
+        "NAT64_POP_ENABLED": "0",
+        "POP_ADDR": "2001:b9a8:a2::",
+        "POP_BGP_ROUTING": "0",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "1",
+        "VPP_ADDR": "2001:9eb7:cd::"
+      }
+    }
+  },
+  "7": {
+    "traffic_gen": {
+      "server_id": 7,
+      "client_id": 12
+    },
+    "port_name": "eth0"
+  },
+  "8": {
+    "port_name": "eth1"
+  },
+  "9": {
+    "port_name": "eth2"
+  },
+  "10": {
+    "port_name": "eth3"
+  },
+  "11": {
+    "port_name": "eth4"
+  },
+  "12": {
+    "port_name": "eth5"
+  },
+  "13": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "name": "configuration-146",
+        "nodes": [
+          {
+            "name": "3A",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:5b:7a:ee",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:5d:1e:c9",
+              "fa:ce:b0:21:1a:47",
+              "fa:ce:b0:f0:2b:90",
+              "fa:ce:b0:8f:a8:6e"
+            ],
+            "site_name": "A",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:9651:73::/64"
+          },
+          {
+            "name": "3B",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:07:60:cb",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:6c:1b:41",
+              "fa:ce:b0:70:59:b2",
+              "fa:ce:b0:c7:a6:ba",
+              "fa:ce:b0:0c:05:34"
+            ],
+            "site_name": "B",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:8e44:a8::/64"
+          },
+          {
+            "name": "3C",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:46:61:91",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:24:ca:2d",
+              "fa:ce:b0:2f:0c:34",
+              "fa:ce:b0:6a:9b:04",
+              "fa:ce:b0:40:a6:8d"
+            ],
+            "site_name": "C",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:1985:4d::/64"
+          },
+          {
+            "name": "3E",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:5b:5d:93",
+            "pop_node": false,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:dd:0e:6e",
+              "fa:ce:b0:55:ea:a0",
+              "fa:ce:b0:51:16:e3",
+              "fa:ce:b0:ff:9d:a7"
+            ],
+            "site_name": "E",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:9d9d:e7::/64"
+          },
+          {
+            "name": "3F",
+            "node_type": 2,
+            "mac_addr": "fa:ce:b0:c1:78:3e",
+            "pop_node": true,
+            "status": 1,
+            "wlan_mac_addrs": [
+              "fa:ce:b0:2d:ba:92",
+              "fa:ce:b0:9c:3f:f6",
+              "fa:ce:b0:37:03:ab",
+              "fa:ce:b0:d5:32:c6"
+            ],
+            "site_name": "F",
+            "ant_azimuth": 0,
+            "ant_elevation": 0,
+            "prefix": "2001:29bc:60::/64"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-3A-3B",
+            "a_node_name": "3A",
+            "z_node_name": "3B",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:f0:2b:90",
+            "z_node_mac": "fa:ce:b0:6c:1b:41"
+          },
+          {
+            "name": "link-3B-3C",
+            "a_node_name": "3B",
+            "z_node_name": "3C",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:70:59:b2",
+            "z_node_mac": "fa:ce:b0:24:ca:2d"
+          },
+          {
+            "name": "link-3B-3E",
+            "a_node_name": "3B",
+            "z_node_name": "3E",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:c7:a6:ba",
+            "z_node_mac": "fa:ce:b0:ff:9d:a7"
+          },
+          {
+            "name": "link-3A-3F",
+            "a_node_name": "3A",
+            "z_node_name": "3F",
+            "link_type": 1,
+            "is_alive": false,
+            "linkup_attempts": 0,
+            "a_node_mac": "fa:ce:b0:5d:1e:c9",
+            "z_node_mac": "fa:ce:b0:9c:3f:f6"
+          }
+        ],
+        "sites": [
+          {
+            "name": "A",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.06,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          },
+          {
+            "name": "B",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.0601,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          },
+          {
+            "name": "C",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.0602,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          },
+          {
+            "name": "E",
+            "location": {
+              "latitude": 37.5501,
+              "longitude": -122.0601,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          },
+          {
+            "name": "F",
+            "location": {
+              "latitude": 37.5501,
+              "longitude": -122.06,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "3A": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:6c:1b:41": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:9c:3f:f6": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:f0:2b:90": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:5d:1e:c9": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "3B": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:f0:2b:90": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:24:ca:2d": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:ff:9d:a7": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:6c:1b:41": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:70:59:b2": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:c7:a6:ba": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "3C": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:70:59:b2": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:24:ca:2d": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "3E": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:c7:a6:ba": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:ff:9d:a7": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "3F": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:9651:73::/58"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:5d:1e:c9": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:9c:3f:f6": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:9651:73::/58"
+          }
+        },
+        "node_config_overrides": {
+          "3A": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:aaeb:bf::/64"
+              }
+            }
+          },
+          "3B": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:938a:82::/64"
+              }
+            }
+          },
+          "3C": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:6039:7d::/64"
+              }
+            }
+          },
+          "3E": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:d619:e4::/64"
+              }
+            }
+          },
+          "3F": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:9651:73::/58"
+            },
+            "kvstoreParams": {
+              "e2e-aggr-url": "tcp://[2001:7c7d:74::]:35849",
+              "e2e-ctrl-url": "tcp://[2001:6e43:5f::]:7007",
+              "e2e-network-prefix": "2001:9651:73::/58,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:dc07:36::",
+              "NAT64_POP_ENABLED": "0",
+              "POP_ADDR": "2001:b9a8:a2::",
+              "POP_BGP_ROUTING": "0",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "1",
+              "VPP_ADDR": "2001:9eb7:cd::"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "VPP_USE_EEPROM_MACS": "1",
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "radioParamsBase": {
+            "fwStatsConfig": {
+              "TGF_STATS_BF": true,
+              "TGF_STATS_BF_SCAN": true,
+              "TGF_STATS_MTPO": true
+            }
+          },
+          "statsAgentParams": {
+            "endpointParams": {
+              "kafkaParams": {
+                "enabled": true
+              },
+              "nmsPublisherParams": {
+                "enabled": false
+              }
+            }
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "test_meta_info": {
+    "test_code": "QoS-P2P-4",
+    "test_code_description": "This test checks the Basic priority service with congestion response"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "fwStatsConfig": {
+        "TGF_STATS_BF": true,
+        "TGF_STATS_MTPO": true,
+        "TGF_STATS_BF_SCAN": true
+      }
+    }
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 6
+          }
+        },
+        "cpeConfig": {
+          "TenGigabitEthernet0": {
+            "policers": {
+              "0": {
+                "cir": 50000,
+                "eir": 950000
+              },
+              "3": {
+                "cir": 300000,
+                "eir": 700000
+              }
+            }
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 6
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 6
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 6
+          }
+        }
+      }
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 188,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x88"
+    },
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 658,
+      "threshold": {
+        "throughput": 0.501,
+        "lost datagrams": 49.86
+      },
+      "port": 5003,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x28"
+    },
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth3",
+      "to_netns": "eth2",
+      "bandwidth": 47,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x88"
+    },
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth3",
+      "to_netns": "eth2",
+      "bandwidth": 141,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5005,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x90"
+    },
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth3",
+      "to_netns": "eth2",
+      "bandwidth": 282,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x28"
+    },
+    {
+      "from_device_id": 3,
+      "to_device_id": 4,
+      "from_netns": "eth3",
+      "to_netns": "eth2",
+      "bandwidth": 470,
+      "threshold": {
+        "throughput": 0.162,
+        "lost datagrams": 83.8
+      },
+      "port": 5007,
+      "traffic_type": "UDP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x30"
+    }
+  ],
+  "ping_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3"
+    }
+  ]
+}

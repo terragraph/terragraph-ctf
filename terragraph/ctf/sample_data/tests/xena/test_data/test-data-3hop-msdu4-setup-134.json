@@ -1,0 +1,71 @@
+{
+  "test_meta_info": {
+    "test_code": "XENA-P2P-3HOP-MSDU4",
+    "test_code_description": "Bring-up 3hop link for xena traffic test in FigO setup"
+  },
+  "selected_links": [
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:d4:52:65",
+      "responder_id": 2,
+      "responder_mac": "fa:ce:b0:11:fe:39",
+      "respNodeType": "DN"
+    },
+    {
+      "initiator_id": 2,
+      "initiator_mac": "fa:ce:b0:ec:a4:5e",
+      "responder_id": 3,
+      "responder_mac": "fa:ce:b0:5b:f3:0a",
+      "respNodeType": "DN"
+    },
+    {
+      "initiator_id": 3,
+      "initiator_mac": "fa:ce:b0:2d:df:68",
+      "responder_id": 4,
+      "responder_mac": "fa:ce:b0:62:fb:09",
+      "respNodeType": "DN"
+    }
+  ],
+  "nodes_data_amend_all": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "forceGpsDisable": 1,
+          "mtpoEnabled": 0,
+          "ibfSet1RficBitmap": 0,
+          "ibfSet2RficBitmap": 85,
+          "ibfCodebookVariant": 0,
+          "msduPerMpdu": 4
+        }
+      }
+    }
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "cpeConfig": {
+          "TenGigabitEthernet0": {
+            "prefix": "69::/64"
+          }
+        }
+      }
+    },
+    "4": {
+      "node_config": {
+        "cpeConfig": {
+          "TenGigabitEthernet0": {
+            "prefix": "73::/64"
+          }
+        }
+      }
+    }
+  },
+  "test_options": {
+    "action_node_ids": [
+      1,
+      4
+    ],
+    "ping_src_node_id": 1,
+    "ping_dst_node_id": 4
+  }
+}

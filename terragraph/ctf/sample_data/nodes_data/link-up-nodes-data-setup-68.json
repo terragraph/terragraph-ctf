@@ -1,0 +1,61 @@
+{
+  "5": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:43:85:3b",
+          "responder_mac": "fa:ce:b0:57:c4:ea",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:f2:86:72",
+          "responder_mac": "fa:ce:b0:13:35:0f",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:81:4e:8d",
+          "responder_mac": "fa:ce:b0:12:1e:37",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "3": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 3,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:02:a4:aa",
+          "responder_mac": "fa:ce:b0:ff:13:fa",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:44:ef:d4",
+          "responder_mac": "fa:ce:b0:fb:38:ba",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "assoc_sequence": 1,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:62:00:97",
+          "responder_mac": "fa:ce:b0:1d:ef:08",
+          "respNodeType": "DN"
+        },
+        {
+          "initiator_mac": "fa:ce:b0:15:11:25",
+          "responder_mac": "fa:ce:b0:18:d8:c0",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  }
+}

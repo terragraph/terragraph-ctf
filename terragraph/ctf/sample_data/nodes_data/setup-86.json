@@ -1,0 +1,266 @@
+{
+  "1": {
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65001,
+        "neighbors": {
+          "0": {
+            "asn": 65000,
+            "ipv6": "2001:530e:f3::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:5c54:e4::/61"
+      },
+      "kvstoreParams": {
+        "e2e-ctrl-url": "tcp://[2001:b820:6d::]:7007",
+        "e2e-network-prefix": "2001:5c54:e4::/61,64"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:530e:f3::",
+        "POP_ADDR": "2001:0cc3:b3::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:dcfc:84::"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:6441:00::/64"
+        }
+      }
+    }
+  },
+  "7": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "config": {},
+        "nodes": [
+          {
+            "name": "DUT1",
+            "mac_addr": "fa:ce:b0:38:23:9d",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:ad:6c:cd"
+            ],
+            "pop_node": true,
+            "node_type": 2,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "DUT-1"
+          },
+          {
+            "name": "DUT2",
+            "mac_addr": "fa:ce:b0:62:65:d0",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:84:df:1f",
+              "fa:ce:b0:9a:7f:f8"
+            ],
+            "pop_node": false,
+            "node_type": 2,
+            "ant_elevation": 0,
+            "ant_azimuth": 0,
+            "site_name": "DUT-2"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-DUT1-DUT2",
+            "a_node_name": "DUT1",
+            "z_node_name": "DUT2",
+            "a_node_mac": "fa:ce:b0:ad:6c:cd",
+            "z_node_mac": "fa:ce:b0:9a:7f:f8",
+            "is_alive": false,
+            "link_type": 1,
+            "linkup_attempts": 0
+          }
+        ],
+        "sites": [
+          {
+            "name": "DUT-1",
+            "location": {
+              "latitude": 37.48435,
+              "longitude": -122.150046667,
+              "altitude": 11.74,
+              "accuracy": 24.7
+            }
+          },
+          {
+            "name": "DUT-2",
+            "location": {
+              "latitude": 37.486203333,
+              "longitude": -122.150701667,
+              "altitude": 3.73,
+              "accuracy": 24.7
+            }
+          }
+        ],
+        "name": "configuration-199"
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "DUT2": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:ad:6c:cd": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:9a:7f:f8": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            },
+            "topologyInfo": {
+              "distributedIgnitionNumColors": 4,
+              "neighborInfo": {
+                "fa:ce:b0:ad:6c:cd": {
+                  "controlSuperframe": 255,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:9a:7f:f8",
+                  "nodePolarity": 2,
+                  "nodeType": 1
+                }
+              },
+              "nodeName": "DUT2",
+              "nodeType": 2,
+              "radioInfo": {
+                "fa:ce:b0:9a:7f:f8": {
+                  "distributedIgnitionColor": 3
+                }
+              },
+              "site": {
+                "location": {
+                  "latitude": 37.486203333,
+                  "longitude": -122.150701667,
+                  "altitude": 3.73,
+                  "accuracy": 24.7
+                },
+                "name": "DUT-2"
+              },
+              "topologyName": "configuration-199"
+            }
+          },
+          "DUT1": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:5c54:e4::/61"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:9a:7f:f8": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:ad:6c:cd": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            },
+            "topologyInfo": {
+              "distributedIgnitionNumColors": 4,
+              "neighborInfo": {
+                "fa:ce:b0:9a:7f:f8": {
+                  "controlSuperframe": 0,
+                  "golayIdx": {
+                    "rxGolayIdx": 2,
+                    "txGolayIdx": 2
+                  },
+                  "initiatorMac": "fa:ce:b0:ad:6c:cd",
+                  "nodePolarity": 1,
+                  "nodeType": 2
+                }
+              },
+              "nodeName": "DUT1",
+              "nodeType": 2,
+              "radioInfo": {
+                "fa:ce:b0:ad:6c:cd": {
+                  "distributedIgnitionColor": 0
+                }
+              },
+              "site": {
+                "location": {
+                  "latitude": 37.486203333,
+                  "longitude": -122.150701667,
+                  "altitude": 3.73,
+                  "accuracy": 24.7
+                },
+                "name": "DUT-1"
+              },
+              "topologyName": "configuration-199"
+            }
+          }
+        },
+        "controller_config": {
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:5c54:e4::/61"
+          }
+        },
+        "node_config_overrides": {
+          "DUT1": {
+            "bgpParams": {
+              "localAsn": 65001,
+              "neighbors": {
+                "0": {
+                  "asn": 65000,
+                  "ipv6": "2001:530e:f3::"
+                }
+              }
+            },
+            "kvstoreParams": {
+              "e2e-ctrl-url": "tcp://[2001:b820:6d::]:7007",
+              "e2e-network-prefix": "2001:5c54:e4::/61,64"
+            },
+            "popParams": {
+              "GW_ADDR": "2001:530e:f3::",
+              "POP_ADDR": "2001:0cc3:b3::",
+              "POP_BGP_ROUTING": "1",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:dcfc:84::"
+            }
+          },
+          "DUT2": {
+            "cpeConfig": {
+              "TenGigabitEthernet0": {
+                "prefix": "2001:6441:00::/64"
+              }
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}

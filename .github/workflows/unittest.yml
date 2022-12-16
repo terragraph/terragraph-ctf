@@ -1,0 +1,32 @@
+name: Python Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'docusaurus/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: |
+          cd ./ctf/ctf_client/ ; pip install -r requirements.txt ; cd -
+          cd ./ctf/common/     ; pip install -r requirements.txt ; cd -
+          pip install requests later pandas
+
+      - name: Run Unit Tests
+        run: EXTERNAL_DEPLOYMENT=True python3 -m unittest terragraph/ctf/unittests_lib.py

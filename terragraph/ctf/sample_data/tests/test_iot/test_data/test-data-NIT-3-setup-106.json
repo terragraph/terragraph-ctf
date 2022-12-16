@@ -1,0 +1,31 @@
+{
+  "test_meta_info": {
+    "test_code": "NodeIOTv2-NIT-3",
+    "test_code_description": ""
+  },
+  "dissoc_links": [
+    {
+      "link_name": "link-MPK_18-49-POP_MPK_Roof_16",
+      "initiator_mac": "fa:ce:b0:28:02:5c",
+      "responder_mac": "fa:ce:b0:ca:0a:ea"
+    },
+    {
+      "link_name": "link-MPK_18-57-POP_MPK_Roof_16",
+      "initiator_mac": "fa:ce:b0:14:b3:4f",
+      "responder_mac": "fa:ce:b0:17:56:90"
+    }
+  ],
+  "ping_profile": {
+    "pop_node_id": 1,
+    "network_node_ids": [
+      2,
+      3,
+      4,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  }
+}

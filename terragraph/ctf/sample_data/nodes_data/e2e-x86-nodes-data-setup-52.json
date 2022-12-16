@@ -1,0 +1,9 @@
+{
+  "1": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {},
+      "configs": {}
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:e1:d9:5e",
+          "responder_mac": "fa:ce:b0:74:bd:7e",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65070,
+        "neighbors": {
+          "0": {
+            "asn": 65069,
+            "ipv6": "2001:104b:5a::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:e893:8e::/61"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:104b:5a::",
+        "POP_ADDR": "2001:e4fc:1b::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:d442:88::"
+      },
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    },
+    "lo": {
+      "ip": "2001:e893:8e::1/128"
+    },
+    "router_ip": "2001:9649:5c::"
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    },
+    "lo": {
+      "ip": "2001:3d08:0c::/128"
+    },
+    "router_ip": "2001:9649:5c::"
+  }
+}

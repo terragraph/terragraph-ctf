@@ -1,0 +1,30 @@
+{
+  "test_meta_info": {
+    "test_code": "ReAT1.1",
+    "test_code_description": "super assoc between DN to CN"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      }
+    }
+  },
+  "selected_links": [
+    {
+      "initiator_id": 1,
+      "initiator_mac": "fa:ce:b0:33:c5:24",
+      "responder_id": 11,
+      "responder_mac": "fa:ce:b0:f5:be:4c",
+      "respNodeType": "DN"
+    }
+  ],
+  "test_options": {
+    "num_iterations": 2,
+    "delay_before_reassoc": 10,
+    "enable_random_disassoc": false,
+    "ping_interface": "terra"
+  }
+}

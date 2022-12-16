@@ -1,0 +1,10 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GPS-6.1: Multi-Hop GPS Test with DNs",
+    "test_description": "Config for Setup 70. Use link-up-nodes-data-92-2-hop.json. Test GPS sync over multi-hops, DN can be 1 hop away from GPS source to maintain successful association. Puma Multi-Hop setup"
+  },
+  "test_details": {
+    "dn_initiator_id": 8,
+    "dn_responder_id": 1
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test_meta_info": {
+    "test_code": "E2E-REG-2: Power Outage network recovery Test",
+    "test_code_description": "This test checks that after power outage the network ignites by itself."
+  },
+  "pdu_information": {
+    "pdus": [
+      {
+        "node": "10-11-POP",
+        "ip": "[2001:44fd:e6::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      },
+      {
+        "node": "12-03-POP",
+        "ip": "[2001:b8d9:39::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      },
+      {
+        "node": "10-17",
+        "ip": "[2001:90d4:de::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      },
+      {
+        "node": "10-20",
+        "ip": "[2001:dbf8:6b::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      },
+      {
+        "node": "10-18",
+        "ip": "[2001:9e94:d0::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      },
+      {
+        "node": "10-X",
+        "ip": "[2001:c971:15::]",
+        "outlet": 1,
+        "user": "admin",
+        "password": "facebook",
+        "wait_time": "0"
+      }
+    ]
+  }
+}

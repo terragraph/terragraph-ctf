@@ -1,0 +1,258 @@
+{
+  "1": {
+    "e2e_controller": {
+      "topology": {
+        "nodes": [
+          {
+            "name": "Puma2_GeTAC_P2_BT1",
+            "mac_addr": "fa:ce:b0:0b:ab:09",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:24:6c:b7",
+              "fa:ce:b0:62:73:69"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "SITE_1"
+          },
+          {
+            "name": "Puma2_P2_BT12",
+            "mac_addr": "fa:ce:b0:71:d9:bd",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:8c:e5:c5",
+              "fa:ce:b0:34:b8:b8"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_2"
+          },
+          {
+            "name": "Puma2_GeTAC_P2_BT3",
+            "mac_addr": "fa:ce:b0:fd:4b:3d",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:39:cb:73",
+              "fa:ce:b0:9f:2a:28"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_3"
+          },
+          {
+            "name": "Puma2_P2_BT13",
+            "mac_addr": "fa:ce:b0:df:8c:f7",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:45:e3:ad",
+              "fa:ce:b0:1a:eb:68"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "SITE_4"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-Puma2_GeTAC_P2_BT1-Puma2_P2_BT12",
+            "a_node_mac": "fa:ce:b0:62:73:69",
+            "a_node_name": "Puma2_GeTAC_P2_BT1",
+            "z_node_mac": "fa:ce:b0:8c:e5:c5",
+            "z_node_name": "Puma2_P2_BT12",
+            "link_type": 1
+          },
+          {
+            "name": "link-Puma2_GeTAC_P2_BT1-Puma2_P2_BT13",
+            "a_node_mac": "fa:ce:b0:24:6c:b7",
+            "a_node_name": "Puma2_GeTAC_P2_BT1",
+            "z_node_mac": "fa:ce:b0:45:e3:ad",
+            "z_node_name": "Puma2_P2_BT13",
+            "link_type": 1
+          },
+          {
+            "name": "link-Puma2_GeTAC_P2_BT3-Puma2_P2_BT12",
+            "a_node_mac": "fa:ce:b0:39:cb:73",
+            "a_node_name": "Puma2_GeTAC_P2_BT3",
+            "z_node_mac": "fa:ce:b0:34:b8:b8",
+            "z_node_name": "Puma2_P2_BT12",
+            "link_type": 1
+          },
+          {
+            "name": "link-Puma2_GeTAC_P2_BT3-Puma2_P2_BT13",
+            "a_node_mac": "fa:ce:b0:9f:2a:28",
+            "a_node_name": "Puma2_GeTAC_P2_BT3",
+            "z_node_mac": "fa:ce:b0:1a:eb:68",
+            "z_node_name": "Puma2_P2_BT13",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_1"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_2"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_3"
+          },
+          {
+            "location": {
+              "accuracy": 39.9,
+              "altitude": 8.42,
+              "latitude": 37.476921667,
+              "longitude": -122.146978333
+            },
+            "name": "SITE_4"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "Puma2_GeTAC_P2_BT1": {
+            "linkParamsOverride": {
+              "fa:ce:b0:8c:e5:c5": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:45:e3:ad": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:24:6c:b7": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:62:73:69": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "Puma2_P2_BT12": {
+            "linkParamsOverride": {
+              "fa:ce:b0:62:73:69": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:39:cb:73": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:8c:e5:c5": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:34:b8:b8": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "Puma2_GeTAC_P2_BT3": {
+            "linkParamsOverride": {
+              "fa:ce:b0:34:b8:b8": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:1a:eb:68": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:39:cb:73": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              },
+              "fa:ce:b0:9f:2a:28": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "Puma2_P2_BT13": {
+            "linkParamsOverride": {
+              "fa:ce:b0:24:6c:b7": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              },
+              "fa:ce:b0:9f:2a:28": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 2,
+                  "txGolayIdx": 2
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:45:e3:ad": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              },
+              "fa:ce:b0:1a:eb:68": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

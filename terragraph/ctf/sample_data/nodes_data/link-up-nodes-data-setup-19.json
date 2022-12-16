@@ -1,0 +1,30 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:66:5d:3c",
+          "responder_mac": "fa:ce:b0:6b:ac:d3",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

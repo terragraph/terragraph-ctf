@@ -1,0 +1,66 @@
+{
+  "0": {
+    "setup": {
+      "name": "network3"
+    }
+  },
+  "1": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "popParams": {
+        "POP_ADDR": "2001:33ef:f7::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:21db:95::",
+        "POP_STATIC_ROUTING": "1",
+        "VPP_ADDR": "2001:ebf9:5f::",
+        "POP_BGP_ROUTING": "0"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:d858:23::/58,64"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:ea:c6:12",
+          "respNodeType": "CN"
+        }
+      ]
+    }
+  },
+  "3": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "2001:c9fb:5f::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:37:5c:01",
+          "responder_mac": "fa:ce:b0:c5:29:c1",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "8": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "2001:d311:f0::/64",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      }
+    }
+  }
+}

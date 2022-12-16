@@ -1,0 +1,58 @@
+{
+  "0": {
+    "setup": {
+      "name": "network12"
+    }
+  },
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:07:8f:53",
+          "responder_mac": "fa:ce:b0:e3:04:34",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "envParams": {
+        "FW_IF2IF": "1",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:93d6:23::/61,64"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0,
+          "forceGpsDisable": 1
+        }
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "68::/64"
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0,
+          "forceGpsDisable": 1
+        }
+      },
+      "envParams": {
+        "FW_IF2IF": "1",
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "71::/64"
+        }
+      }
+    }
+  }
+}

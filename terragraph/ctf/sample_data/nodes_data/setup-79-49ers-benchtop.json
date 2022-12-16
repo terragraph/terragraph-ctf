@@ -1,0 +1,69 @@
+{
+  "1": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "68::/64"
+        }
+      },
+      "sysParams": {
+        "managedConfig": false
+      },
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false",
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "HMAC_VERBOSE": "1",
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "71::/64"
+        }
+      },
+      "sysParams": {
+        "managedConfig": false
+      },
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false",
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4",
+        "HMAC_VERBOSE": "1",
+        "VPP_USE_EEPROM_MACS": "1"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:93d6:23::/61,64"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "channel": 2
+        }
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:59:74:ed",
+          "responder_mac": "fa:ce:b0:62:e9:43",
+          "respNodeType": "CN"
+        }
+      ]
+    }
+  },
+  "3": {
+    "port_name": "eth3"
+  },
+  "4": {
+    "port_name": "eth2"
+  }
+}

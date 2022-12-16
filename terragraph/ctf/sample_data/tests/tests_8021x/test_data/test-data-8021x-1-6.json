@@ -1,0 +1,38 @@
+{
+  "test_meta_info": {
+    "test_code": "8021X-1-6",
+    "test_code_description": "Procedure: Randomly select a peer. Break the link using attenuator (or restarting the e2e_minion) between initiator and peer. Set attenuation to 0, and allow the link to come back up. After linkup, ping the peer. Validation: No crashes. All pings succeed."
+  },
+  "e2e_ignition_config": {
+    "continue_on_failure": false,
+    "negate_result": false,
+    "ignition_timeout_s": 600
+  },
+  "responder_nodes": [
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10
+  ],
+  "traffic_profile": [
+    {
+      "from_device_id": 14,
+      "to_device_id": 15,
+      "from_netns": "eth3",
+      "to_netns": "enp7s0",
+      "bandwidth": 1000,
+      "threshold": {
+        "throughput": 0.9,
+        "lost datagrams": 0.01
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    }
+  ]
+}

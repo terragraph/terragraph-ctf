@@ -1,0 +1,88 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_E2E_RE-IGN_FIG8_ROOFTOP",
+    "test_code_description": "Figure8 network reignition with minion restart on nodes."
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 12,
+      "to_device_id": 11,
+      "from_netns": "eth5",
+      "to_netns": "eth4",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 12,
+      "to_device_id": 10,
+      "from_netns": "eth5",
+      "to_netns": "eth3",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 12,
+      "to_device_id": 9,
+      "from_netns": "eth5",
+      "to_netns": "eth2",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 12,
+      "to_device_id": 8,
+      "from_netns": "eth5",
+      "to_netns": "eth1",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    },
+    {
+      "from_device_id": 12,
+      "to_device_id": 7,
+      "from_netns": "eth5",
+      "to_netns": "eth0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5010,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 120
+    }
+  ]
+}

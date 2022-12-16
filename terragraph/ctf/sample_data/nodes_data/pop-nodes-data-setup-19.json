@@ -1,0 +1,55 @@
+{
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:66:5d:3c",
+          "responder_mac": "fa:ce:b0:6b:ac:d3",
+          "respNodeType": "DN"
+        }
+      ]
+    },
+    "node_config": {
+      "bgpParams": {
+        "localAsn": 65001,
+        "neighbors": {
+          "0": {
+            "asn": 65000,
+            "ipv6": "2001:a534:d5::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:b0f6:3e::/61"
+      },
+      "popParams": {
+        "GW_ADDR": "2001:a534:d5::",
+        "POP_ADDR": "2001:af23:d9::",
+        "POP_BGP_ROUTING": "1",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "VPP_ADDR": "2001:3482:ea::"
+      },
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    },
+    "lo": {
+      "ip": "2001:b0f6:3e::1/128"
+    },
+    "router_ip": "2001:a534:d5::"
+  },
+  "2": {
+    "lo": {
+      "ip": "2001:53c3:c6::/128"
+    },
+    "router_ip": "2001:a534:d5::",
+    "node_config": {
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

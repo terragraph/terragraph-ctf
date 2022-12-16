@@ -1,0 +1,262 @@
+{
+  "test_meta_info": {
+    "test_code": "AT-3.1",
+    "test_code_description": "Test p2mp 1DN-6CNs+2DNs (golay 1) link association, packet size 1452(UDP) for 300 seconds."
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "radioParamsBase": {
+        "fwParams": {
+          "wsecEnable": 0
+        }
+      }
+    }
+  },
+  "nodes_data_amend": {
+    "1": {
+      "assoc": {
+        "channel": 2,
+        "links": [
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:e3:1e:bc",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:37:5c:01",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:d5:77:ce",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:63:de:9e",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:41:99:37",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:78:63:e8",
+            "respNodeType": "CN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:2f:80:65",
+            "respNodeType": "DN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          },
+          {
+            "initiator_mac": "fa:ce:b0:c5:29:c1",
+            "responder_mac": "fa:ce:b0:01:c4:3b",
+            "respNodeType": "DN",
+            "txGolayIdx": 1,
+            "rxGolayIdx": 1
+          }
+        ]
+      }
+    }
+  },
+  "ping_profile": {
+    "link": [
+      {
+        "from_device_id": 10,
+        "to_device_id": 11,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 12,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 13,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 14,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 15,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 16,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 17,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      },
+      {
+        "from_device_id": 10,
+        "to_device_id": 18,
+        "from_netns": "eth5",
+        "to_netns": "enp7s0"
+      }
+    ]
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 10,
+      "to_device_id": 11,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 12,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 13,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 14,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 15,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5010,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 16,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5012,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 17,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5014,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 18,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 50,
+      "threshold": {
+        "throughput": 0.99,
+        "lost datagrams": 1.0
+      },
+      "port": 5016,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ]
+}

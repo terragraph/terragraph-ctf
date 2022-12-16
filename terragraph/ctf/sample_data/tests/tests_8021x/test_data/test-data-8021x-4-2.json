@@ -1,0 +1,77 @@
+{
+  "test_meta_info": {
+    "test_code": "8021X-4-2",
+    "test_code_description": "4-Sector Traffic"
+  },
+  "e2e_ignition_config": {
+    "continue_on_failure": false,
+    "negate_result": false,
+    "ignition_timeout_s": 600
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 6,
+      "to_device_id": 7,
+      "from_netns": "eth4",
+      "to_netns": "eth1",
+      "bandwidth": 100,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 20.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    },
+    {
+      "from_device_id": 6,
+      "to_device_id": 8,
+      "from_netns": "eth4",
+      "to_netns": "eth0",
+      "bandwidth": 100,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 20.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    },
+    {
+      "from_device_id": 6,
+      "to_device_id": 9,
+      "from_netns": "eth4",
+      "to_netns": "eth2",
+      "bandwidth": 100,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 20.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    },
+    {
+      "from_device_id": 6,
+      "to_device_id": 10,
+      "from_netns": "eth4",
+      "to_netns": "eth3",
+      "bandwidth": 100,
+      "threshold": {
+        "throughput": 0.7,
+        "lost datagrams": 20.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    }
+  ]
+}

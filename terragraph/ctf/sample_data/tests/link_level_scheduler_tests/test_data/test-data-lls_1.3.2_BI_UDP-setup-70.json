@@ -1,0 +1,112 @@
+{
+  "test_meta_info": {
+    "test_code": "LLS-1.3.2bi_udp",
+    "test_code_description": ": Tideal {0.5, 0.2, 0.2, 0.1}, UDP bidirectional traffic"
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "linkParamsOverride": {
+          "fa:ce:b0:e3:1e:bc": {
+            "txIdeal": 5000,
+            "txMin": 200,
+            "txMax": 10000,
+            "rxIdeal": 5000,
+            "rxMin": 200,
+            "rxMax": 10000
+          },
+          "fa:ce:b0:37:5c:01": {
+            "txIdeal": 2000,
+            "txMin": 200,
+            "txMax": 10000,
+            "rxIdeal": 2000,
+            "rxMin": 200,
+            "rxMax": 10000
+          },
+          "fa:ce:b0:d5:77:ce": {
+            "txIdeal": 2000,
+            "txMin": 200,
+            "txMax": 10000,
+            "rxIdeal": 2000,
+            "rxMin": 200,
+            "rxMax": 10000
+          },
+          "fa:ce:b0:63:de:9e": {
+            "txIdeal": 1000,
+            "txMin": 200,
+            "txMax": 10000,
+            "rxIdeal": 1000,
+            "rxMin": 200,
+            "rxMax": 10000
+          }
+        }
+      }
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 10,
+      "to_device_id": 11,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 468,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 12,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 187,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 1.0
+      },
+      "port": 5004,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 13,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 187,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 1.0
+      },
+      "port": 5006,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    },
+    {
+      "from_device_id": 10,
+      "to_device_id": 14,
+      "from_netns": "eth5",
+      "to_netns": "enp7s0",
+      "bandwidth": 98,
+      "threshold": {
+        "throughput": 0.95,
+        "lost datagrams": 1.0
+      },
+      "port": 5008,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 300
+    }
+  ]
+}

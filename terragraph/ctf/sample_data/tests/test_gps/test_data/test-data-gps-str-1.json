@@ -1,0 +1,15 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GPS_STR-1: P2P GPS Sync",
+    "test_description": "Testing GPS sync between 2DNs after loss of GPS signal on initiator"
+  },
+  "test_details": {
+    "dn_initiator_id": 1,
+    "dn_responder_id": 2,
+    "dn_initiator_mac": "fa:ce:b0:72:60:73",
+    "dn_responder_mac": "fa:ce:b0:c7:f2:f5"
+  },
+  "ping_stream": {
+    "from_device_id": 1
+  }
+}

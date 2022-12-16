@@ -1,0 +1,46 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_ROU5",
+    "test_code_description": "Verify that re-route convergence time is within 240ms after link down in fig8"
+  },
+  "test_options": {
+    "action": {
+      "nodes": [
+        1,
+        2
+      ],
+      "node_names": [
+        "IF-404-8A",
+        "IF-404-8F"
+      ],
+      "event": "LINK_DOWN_CONVERGENCE",
+      "re_route_finish_time_s": 0.24,
+      "ping_duration_s": 240,
+      "ping_interval_s": 0.02
+    },
+    "attenuator_all_nodes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "attenuator_action_nodes": [
+      10
+    ],
+    "attenuation_value": 60,
+    "ping_all_src_node_id": 4,
+    "ping_all_skip_node_ids": [
+      7
+    ],
+    "setup_tg_nodes_fig8": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+}

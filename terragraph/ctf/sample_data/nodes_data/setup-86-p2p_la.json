@@ -1,0 +1,68 @@
+{
+  "1": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "radioParamsBase": {
+        "fwParams": {
+          "forceGpsDisable": 1
+        }
+      },
+      "popParams": {
+        "POP_ADDR": "2001:0cc3:b3::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:530e:f3::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:dcfc:84::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65001,
+        "neighbors": {
+          "0": {
+            "asn": 65000,
+            "ipv6": "2001:530e:f3::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:5c54:e4::/61"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:5c54:e4::/61,64",
+        "e2e-ctrl-url": "tcp://[2001:b820:6d::]:7007"
+      }
+    },
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:ad:6c:cd",
+          "responder_mac": "fa:ce:b0:9a:7f:f8",
+          "respNodeType": "CN"
+        }
+      ]
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "OPENR_STATIC_PREFIX_ALLOC": "false"
+      },
+      "cpeConfig": {
+        "TenGigabitEthernet0": {
+          "prefix": "2001:3dfe:16::/64"
+        }
+      },
+      "4": {
+        "traffic_gen": {
+          "server_id": 4,
+          "client_id": 5
+        },
+        "port_name": "eth7"
+      },
+      "5": {
+        "port_name": "eth6"
+      }
+    }
+  }
+}

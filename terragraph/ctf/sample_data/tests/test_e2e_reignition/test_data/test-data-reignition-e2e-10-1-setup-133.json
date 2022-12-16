@@ -1,0 +1,99 @@
+{
+  "test_meta_info": {
+    "test_code": "E2E-10_1",
+    "test_code_description": "Remove and add links and a node in the e2e topology file and recheck e2e network"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "envParams": {
+        "FW_LOGGING_ENABLED": "1",
+        "FW_LOG_VERBOSE": "4"
+      },
+      "radioParamsBase": {
+        "fwStatsConfig": {
+          "TGF_STATS_BF": true,
+          "TGF_STATS_BF_SCAN": true,
+          "TGF_STATS_MTPO": true
+        }
+      }
+    }
+  },
+  "test_options": {
+    "action_iterations": 1,
+    "action": "delete_add_node_links",
+    "action_data": {
+      "link1_down": {
+        "action": 2,
+        "initiatorNodeName": "IF-TWRG-DN544",
+        "responderNodeName": "IF-TWRG-DN554"
+      },
+      "link2_down": {
+        "action": 2,
+        "initiatorNodeName": "IF-TWRG-DN544",
+        "responderNodeName": "IF-TWRG-DN545"
+      },
+      "delete_link1": {
+        "aNodeName": "IF-TWRG-DN544",
+        "zNodeName": "IF-TWRG-DN554",
+        "force": true
+      },
+      "delete_link2": {
+        "aNodeName": "IF-TWRG-DN544",
+        "zNodeName": "IF-TWRG-DN545",
+        "force": true
+      },
+      "delete_node": {
+        "nodeName": "IF-TWRG-DN544",
+        "force": true
+      },
+      "add_node": {
+        "node": {
+          "name": "IF-TWRG-DN544",
+          "node_type": 2,
+          "is_primary": true,
+          "mac_addr": "fa:ce:b0:d0:1b:ef",
+          "pop_node": false,
+          "status": 1,
+          "wlan_mac_addrs": [
+            "fa:ce:b0:e6:55:c3",
+            "fa:ce:b0:80:5c:59",
+            "fa:ce:b0:da:53:91",
+            "fa:ce:b0:6e:d2:47"
+          ],
+          "site_name": "DN544",
+          "ant_azimuth": 0,
+          "ant_elevation": 0
+        }
+      },
+      "add_link1": {
+        "link": {
+          "name": "link-IF-TWRG-DN544-IF-TWRG-DN554",
+          "a_node_name": "IF-TWRG-DN544",
+          "z_node_name": "IF-TWRG-DN554",
+          "link_type": 1,
+          "is_alive": false,
+          "linkup_attempts": 0,
+          "a_node_mac": "fa:ce:b0:e6:55:c3",
+          "z_node_mac": "fa:ce:b0:80:00:7a"
+        }
+      },
+      "add_link2": {
+        "link": {
+          "name": "link-IF-TWRG-DN544-IF-TWRG-DN545",
+          "a_node_name": "IF-TWRG-DN544",
+          "z_node_name": "IF-TWRG-DN545",
+          "link_type": 1,
+          "is_alive": false,
+          "linkup_attempts": 0,
+          "a_node_mac": "fa:ce:b0:6e:d2:47",
+          "z_node_mac": "fa:ce:b0:70:6d:c6"
+        }
+      }
+    },
+    "action_node_ids": [
+      7
+    ],
+    "ping_all_src_node_id": 2,
+    "ping_all_skip_node_ids": []
+  }
+}

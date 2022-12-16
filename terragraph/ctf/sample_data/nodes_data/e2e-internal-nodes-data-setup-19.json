@@ -1,0 +1,100 @@
+{
+  "1": {
+    "e2e_controller": {
+      "topology": {
+        "nodes": [
+          {
+            "name": "barbell-1",
+            "mac_addr": "fa:ce:b0:fa:74:ca",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:66:5d:3c"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "BARBELL1"
+          },
+          {
+            "name": "barbell-2",
+            "mac_addr": "fa:ce:b0:aa:44:48",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:6b:ac:d3"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "BARBELL2"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-barbell-1-barbell-2",
+            "a_node_mac": "fa:ce:b0:66:5d:3c",
+            "a_node_name": "barbell-1",
+            "z_node_mac": "fa:ce:b0:6b:ac:d3",
+            "z_node_name": "barbell-2",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "location": {
+              "accuracy": 34.96,
+              "altitude": 13.8,
+              "latitude": 37.484892833,
+              "longitude": -122.1473905
+            },
+            "name": "BARBELL1"
+          },
+          {
+            "location": {
+              "accuracy": 30.21,
+              "altitude": 16.2,
+              "latitude": 37.484888333,
+              "longitude": -122.147392333
+            },
+            "name": "BARBELL2"
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "barbell-1": {
+            "radioParamsOverride": {
+              "fa:ce:b0:66:5d:3c": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "barbell-2": {
+            "radioParamsOverride": {
+              "fa:ce:b0:6b:ac:d3": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "node_config": {
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "envParams": {
+        "GPSD_GPS_MODULE": "ublox",
+        "GPSD_BAUD_RATE": "9600",
+        "VPP_USE_EEPROM_MACS": "1"
+      }
+    }
+  }
+}

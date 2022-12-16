@@ -1,0 +1,104 @@
+{
+  "test_meta_info": {
+    "test_code": "QoS-P2P-6_1",
+    "test_code_description": "This test checks the Policer remarking with TCP -- confirm packet order preserved ( DN - DN )"
+  },
+  "nodes_data_amend_all": {
+    "node_config": {
+      "fwStatsConfig": {
+        "TGF_STATS_BF": true,
+        "TGF_STATS_MTPO": true,
+        "TGF_STATS_BF_SCAN": true
+      }
+    }
+  },
+  "nodes_data_amend": {
+    "1": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9,
+            "respNodeType": 2
+          }
+        },
+        "cpeConfig": {
+          "TenGigabitEthernet0": {
+            "policers": {
+              "0": {
+                "cir": 50000,
+                "eir": 950000
+              },
+              "3": {
+                "cir": 300000,
+                "eir": 700000
+              }
+            }
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        }
+      }
+    },
+    "2": {
+      "node_config": {
+        "linkParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        },
+        "radioParamsBase": {
+          "fwParams": {
+            "laMaxMcs": 9
+          }
+        }
+      }
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 188,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5002,
+      "traffic_type": "TCP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x88"
+    },
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 658,
+      "threshold": {
+        "throughput": 1.0,
+        "lost datagrams": 2
+      },
+      "port": 5003,
+      "traffic_type": "TCP",
+      "direction": "uni",
+      "packet_size": "752",
+      "time": 180,
+      "tos": "0x28"
+    }
+  ],
+  "ping_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3"
+    }
+  ]
+}

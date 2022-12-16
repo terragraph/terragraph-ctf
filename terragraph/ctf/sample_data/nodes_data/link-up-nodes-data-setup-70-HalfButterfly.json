@@ -1,0 +1,26 @@
+{
+  "8": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:2f:80:65",
+          "responder_mac": "fa:ce:b0:c5:29:c1",
+          "respNodeType": "DN"
+        }
+      ]
+    }
+  },
+  "1": {
+    "assoc": {
+      "channel": 2,
+      "links": [
+        {
+          "initiator_mac": "fa:ce:b0:c5:29:c1",
+          "responder_mac": "fa:ce:b0:37:5c:01",
+          "respNodeType": "CN"
+        }
+      ]
+    }
+  }
+}

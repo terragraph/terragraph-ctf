@@ -1,0 +1,480 @@
+{
+  "1": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:da:52:9d": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:8d:5a:71": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:41:83:e5": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:0f:3a:20": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:da:52:9d": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:0f:3a:20",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:8d:5a:71": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:41:83:e5",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.nrg15.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:41:83:e5": {
+            "distributedIgnitionColor": 2
+          },
+          "fa:ce:b0:0f:3a:20": {
+            "distributedIgnitionColor": 0
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_1"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  },
+  "2": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:23:e1:72": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:2d:3a:3f": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:0f:3a:20": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:75:79:5b": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:48:ef:13": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:da:52:9d": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:23:e1:72": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:75:79:5b",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:2d:3a:3f": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:48:ef:13",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:0f:3a:20": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:da:52:9d",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.ak07026048.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:75:79:5b": {
+            "distributedIgnitionColor": 1
+          },
+          "fa:ce:b0:48:ef:13": {
+            "distributedIgnitionColor": 1
+          },
+          "fa:ce:b0:da:52:9d": {
+            "distributedIgnitionColor": 3
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_2"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  },
+  "3": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:ad:ea:80": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:75:79:5b": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:6c:0b:17": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:23:e1:72": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:ad:ea:80": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:6c:0b:17",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:75:79:5b": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:23:e1:72",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.ak18016925.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:6c:0b:17": {
+            "distributedIgnitionColor": 2
+          },
+          "fa:ce:b0:23:e1:72": {
+            "distributedIgnitionColor": 0
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_3"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  },
+  "4": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:6c:0b:17": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:ad:ea:80": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:6c:0b:17": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:ad:ea:80",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.ak18016923.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:ad:ea:80": {
+            "distributedIgnitionColor": 1
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_4"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  },
+  "5": {
+    "node_config": {
+      "envParams": {
+        "GPSD_BAUD_RATE": "9600",
+        "GPSD_GPS_MODULE": "ublox"
+      },
+      "linkParamsOverride": {
+        "fa:ce:b0:40:e5:d6": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:48:ef:13": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:be:77:d3": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        },
+        "fa:ce:b0:2d:3a:3f": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 2
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:40:e5:d6": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:be:77:d3",
+            "nodePolarity": 1,
+            "nodeType": 2
+          },
+          "fa:ce:b0:48:ef:13": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:2d:3a:3f",
+            "nodePolarity": 1,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.nrg37.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:be:77:d3": {
+            "distributedIgnitionColor": 0
+          },
+          "fa:ce:b0:2d:3a:3f": {
+            "distributedIgnitionColor": 2
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_5"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  },
+  "6": {
+    "node_config": {
+      "linkParamsOverride": {
+        "fa:ce:b0:41:83:e5": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        },
+        "fa:ce:b0:be:77:d3": {
+          "fwParams": {
+            "controlSuperframe": 0,
+            "rxGolayIdx": 2,
+            "txGolayIdx": 2
+          }
+        }
+      },
+      "radioParamsOverride": {
+        "fa:ce:b0:40:e5:d6": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        },
+        "fa:ce:b0:8d:5a:71": {
+          "fwParams": {
+            "channel": 2,
+            "polarity": 1
+          }
+        }
+      },
+      "topologyInfo": {
+        "distributedIgnitionNumColors": 4,
+        "neighborInfo": {
+          "fa:ce:b0:41:83:e5": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:8d:5a:71",
+            "nodePolarity": 2,
+            "nodeType": 2
+          },
+          "fa:ce:b0:be:77:d3": {
+            "controlSuperframe": 0,
+            "golayIdx": {
+              "rxGolayIdx": 2,
+              "txGolayIdx": 2
+            },
+            "initiatorMac": "fa:ce:b0:40:e5:d6",
+            "nodePolarity": 2,
+            "nodeType": 2
+          }
+        },
+        "nodeName": "puma.ak18016924.assembled",
+        "nodeType": 2,
+        "radioInfo": {
+          "fa:ce:b0:40:e5:d6": {
+            "distributedIgnitionColor": 1
+          },
+          "fa:ce:b0:8d:5a:71": {
+            "distributedIgnitionColor": 3
+          }
+        },
+        "site": {
+          "location": {
+            "accuracy": 39.9,
+            "altitude": 8.42,
+            "latitude": 37.476921667,
+            "longitude": -122.146978333
+          },
+          "name": "SITE_6"
+        },
+        "topologyName": "Puma Hamilton RF Figure 8"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "test_meta_info": {
+    "test_code": "PUMA_RF_GOLAY-1",
+    "test_code_description": "Test p2p link with different golay indexes using tg minion assoc cmd"
+  },
+  "test_options": {
+    "selected_link": {
+      "initiator_id": 2,
+      "responder_id": 1,
+      "responder_mac": "fa:ce:b0:62:e9:43",
+      "initiator_mac": "fa:ce:b0:59:74:ed",
+      "respNodeType": "CN",
+      "golays": [
+        {
+          "rxGolayIdx": 0,
+          "txGolayIdx": 0
+        },
+        {
+          "rxGolayIdx": 1,
+          "txGolayIdx": 1
+        },
+        {
+          "rxGolayIdx": 2,
+          "txGolayIdx": 2
+        },
+        {
+          "rxGolayIdx": 3,
+          "txGolayIdx": 3
+        },
+        {
+          "rxGolayIdx": 4,
+          "txGolayIdx": 4
+        },
+        {
+          "rxGolayIdx": 5,
+          "txGolayIdx": 5
+        },
+        {
+          "rxGolayIdx": 6,
+          "txGolayIdx": 6
+        },
+        {
+          "rxGolayIdx": 7,
+          "txGolayIdx": 7
+        }
+      ]
+    }
+  },
+  "traffic_profile": [
+    {
+      "from_device_id": 4,
+      "to_device_id": 3,
+      "from_netns": "eth2",
+      "to_netns": "eth3",
+      "bandwidth": 500,
+      "threshold": {
+        "throughput": 0.8,
+        "lost datagrams": 1.0
+      },
+      "port": 5002,
+      "traffic_type": "UDP",
+      "direction": "bi",
+      "packet_size": "1452",
+      "time": 60
+    }
+  ]
+}

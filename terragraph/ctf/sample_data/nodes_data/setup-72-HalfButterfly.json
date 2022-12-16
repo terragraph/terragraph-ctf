@@ -1,0 +1,299 @@
+{
+  "1": {
+    "node_config": {
+      "popParams": {
+        "POP_ADDR": "2001:e556:78::",
+        "POP_IFACE": "TenGigabitEthernet0",
+        "GW_ADDR": "2001:1963:83::",
+        "POP_STATIC_ROUTING": "0",
+        "VPP_ADDR": "2001:471a:74::",
+        "POP_BGP_ROUTING": "1"
+      },
+      "bgpParams": {
+        "localAsn": 65127,
+        "neighbors": {
+          "0": {
+            "asn": 65123,
+            "ipv6": "2001:1963:83::"
+          }
+        },
+        "specificNetworkPrefixes": "2001:9dd0:41::/59"
+      },
+      "kvstoreParams": {
+        "e2e-network-prefix": "2001:9dd0:41::/59,64",
+        "e2e-ctrl-url": "tcp://[2001:0288:dd::]:7007"
+      },
+      "radioParamsBase": {
+        "fwStatsConfig": {
+          "TGF_STATS_BF": true,
+          "TGF_STATS_MTPO": true,
+          "TGF_STATS_BF_SCAN": true
+        }
+      }
+    }
+  },
+  "10": {
+    "node_config": {
+      "envParams": {
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "2001:c379:38::/64"
+      }
+    }
+  },
+  "13": {
+    "node_config": {
+      "envParams": {
+        "CPE_INTERFACE": "TenGigabitEthernet0",
+        "CPE_IFACE_IP_PREFIX": "2001:b328:a5::/64"
+      }
+    }
+  },
+  "14": {
+    "traffic_gen": {
+      "server_id": 14,
+      "client_id": 15
+    },
+    "port_name": "eth3"
+  },
+  "23": {
+    "port_name": "enp7s0"
+  },
+  "26": {
+    "port_name": "enp7s0"
+  },
+  "27": {
+    "e2e_controller": {
+      "global_iface": "ens160",
+      "topology": {
+        "nodes": [
+          {
+            "name": "DUT-1",
+            "mac_addr": "fa:ce:b0:81:dc:ee",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:44:92:4c",
+              "fa:ce:b0:32:9b:3f",
+              "fa:ce:b0:54:63:18",
+              "fa:ce:b0:76:fe:fa"
+            ],
+            "node_type": 2,
+            "pop_node": true,
+            "site_name": "DUT-1"
+          },
+          {
+            "name": "XButterfly-1",
+            "mac_addr": "fa:ce:b0:b3:88:49",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a2:cf:89",
+              "fa:ce:b0:eb:57:f3",
+              "fa:ce:b0:08:c8:ef",
+              "fa:ce:b0:c6:1b:7b"
+            ],
+            "node_type": 2,
+            "pop_node": false,
+            "site_name": "M"
+          },
+          {
+            "name": "XButterfly-4",
+            "mac_addr": "fa:ce:b0:42:a1:a1",
+            "wlan_mac_addrs": [
+              "fa:ce:b0:a4:74:73",
+              "fa:ce:b0:bb:21:a9",
+              "fa:ce:b0:b1:0b:9a",
+              "fa:ce:b0:94:2b:9e"
+            ],
+            "node_type": 1,
+            "pop_node": false,
+            "site_name": "K"
+          }
+        ],
+        "links": [
+          {
+            "name": "link-DUT-1-XButterfly-1",
+            "a_node_name": "DUT-1",
+            "z_node_name": "XButterfly-1",
+            "a_node_mac": "fa:ce:b0:44:92:4c",
+            "z_node_mac": "fa:ce:b0:a2:cf:89",
+            "link_type": 1
+          },
+          {
+            "name": "link-XButterfly-1-XButterfly-4",
+            "a_node_name": "XButterfly-1",
+            "z_node_name": "XButterfly-4",
+            "a_node_mac": "fa:ce:b0:a2:cf:89",
+            "z_node_mac": "fa:ce:b0:a4:74:73",
+            "link_type": 1
+          }
+        ],
+        "sites": [
+          {
+            "name": "DUT-1",
+            "location": {
+              "latitude": 37.48435,
+              "longitude": -122.150046667,
+              "altitude": 11.74,
+              "accuracy": 24.7
+            }
+          },
+          {
+            "name": "M",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.0602,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          },
+          {
+            "name": "K",
+            "location": {
+              "latitude": 37.55,
+              "longitude": -122.0602,
+              "altitude": 0,
+              "accuracy": 100
+            }
+          }
+        ]
+      },
+      "configs": {
+        "auto_node_config_overrides": {
+          "XButterfly-1": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:44:92:4c": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              },
+              "fa:ce:b0:a4:74:73": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a2:cf:89": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 1
+                }
+              }
+            }
+          },
+          "XButterfly-4": {
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:a2:cf:89": {
+                "fwParams": {
+                  "controlSuperframe": 255,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:a4:74:73": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          },
+          "DUT-1": {
+            "bgpParams": {
+              "specificNetworkPrefixes": "2001:9dd0:41::/59"
+            },
+            "envParams": {
+              "OPENR_STATIC_PREFIX_ALLOC": "true"
+            },
+            "linkParamsOverride": {
+              "fa:ce:b0:a2:cf:89": {
+                "fwParams": {
+                  "controlSuperframe": 0,
+                  "rxGolayIdx": 1,
+                  "txGolayIdx": 1
+                }
+              }
+            },
+            "radioParamsOverride": {
+              "fa:ce:b0:44:92:4c": {
+                "fwParams": {
+                  "channel": 2,
+                  "polarity": 2
+                }
+              }
+            }
+          }
+        },
+        "controller_config": {
+          "flags": {
+            "bt_tracker_ipv6_global_addressable_ifname": "ens160",
+            "enable_centralized_prefix_alloc": "true",
+            "v": "2"
+          },
+          "ignitionParams": {
+            "enable": true
+          },
+          "prefixAllocParams": {
+            "allocPrefixLen": 64,
+            "seedPrefix": "2001:9dd0:41::/59"
+          }
+        },
+        "node_config_overrides": {
+          "DUT-1": {
+            "popParams": {
+              "POP_ADDR": "2001:e556:78::",
+              "POP_IFACE": "TenGigabitEthernet0",
+              "GW_ADDR": "2001:1963:83::",
+              "POP_STATIC_ROUTING": "0",
+              "VPP_ADDR": "2001:471a:74::",
+              "POP_BGP_ROUTING": "1"
+            },
+            "bgpParams": {
+              "localAsn": 65127,
+              "neighbors": {
+                "0": {
+                  "asn": 65123,
+                  "ipv6": "2001:1963:83::"
+                }
+              },
+              "specificNetworkPrefixes": "2001:9dd0:41::/59"
+            },
+            "kvstoreParams": {
+              "e2e-network-prefix": "2001:9dd0:41::/59,64",
+              "e2e-ctrl-url": "tcp://[2001:0288:dd::]:7007"
+            }
+          },
+          "XButterfly-1": {
+            "envParams": {
+              "CPE_INTERFACE": "TenGigabitEthernet0",
+              "CPE_IFACE_IP_PREFIX": "2001:c379:38::/64"
+            }
+          },
+          "XButterfly-4": {
+            "envParams": {
+              "CPE_INTERFACE": "TenGigabitEthernet0",
+              "CPE_IFACE_IP_PREFIX": "2001:b328:a5::/64"
+            }
+          }
+        },
+        "network_config_overrides": {
+          "envParams": {
+            "FW_LOGGING_ENABLED": "1"
+          },
+          "sysParams": {
+            "managedConfig": true
+          }
+        }
+      }
+    }
+  }
+}
