@@ -81,11 +81,6 @@ class CtfRunner:
             + "only used if '--nodes-data' is not provided",
         )
         run_cmd.add_argument(
-            "--run-sandcastle",
-            action="store_true",
-            help="Run test with sandcastle credentials",
-        )
-        run_cmd.add_argument(
             "--test-setup-id",
             type=int,
             help="Test setup ID in the CTF database (run with 'list-setups' to list them)",
@@ -217,22 +212,6 @@ class CtfRunner:
             format="[%(asctime)s] %(levelname)s: %(message)s (%(filename)s:%(lineno)d)",
             level=logging.DEBUG if args.debug else logging.INFO,
         )
-
-        # Use Sandcastle login credentials
-        if args.run_sandcastle:
-            user = self._get_secret("CTF_BUCK_USER")
-            password = self._get_secret("CTF_BUCK_PASSWORD")
-            api_server_url = self._get_secret("CTF_API_SERVER_URL")
-            file_server_url = self._get_secret("CTF_FILE_SERVER_URL")
-            if user and password and api_server_url and file_server_url:
-                logger.info("Logging in as CTF Test User due to --run-sandcastle flag")
-                os.environ["CTF_USER"] = user
-                os.environ["CTF_PASSWORD"] = password
-                os.environ["CTF_API_SERVER_URL"] = api_server_url
-                os.environ["CTF_FILE_SERVER_URL"] = file_server_url
-            else:
-                logger.error("Failed to fetch all credentials for Sandcastle")
-                return -1
 
         if args.testname in self.tests:
             test = self.tests[args.testname](args)
