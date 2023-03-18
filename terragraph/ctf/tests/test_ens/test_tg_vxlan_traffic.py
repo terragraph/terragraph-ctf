@@ -42,6 +42,7 @@ class TestTgVxlanTraffic(TestX86TGIgn):
             ]
             node_names = [node["name"] for node in e2e_topology["nodes"]]
 
+        # pyre-fixme[61]: `e2e_ctrl_node_id` is undefined, or not always defined.
         node_overrides = local_nodes_data[e2e_ctrl_node_id]["e2e_controller"][
             "configs"
         ]["node_config_overrides"]
