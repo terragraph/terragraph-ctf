@@ -186,10 +186,10 @@ class CtfRunner:
         return parser
 
     def _get_secret(self, secret) -> Optional[str]:
-        req = keychain.GetSecretRequest(name=secret, author=keychain.RequestAuthor())
+        req = keychain.GetSecretRequestV2(name=secret)
         try:
-            secret = KeychainClient().getSecret(req)
-            secret_str = str(secret.secret)
+            secret_resp = KeychainClient().getSecretV2(req)
+            secret_str = str(secret_resp.secret.value, "utf-8")
             return secret_str
         except (
             keychain.KeychainServiceException,
