@@ -7,7 +7,8 @@
 
 import json
 
-import mock
+import unittest.mock as mock
+
 import pytest
 
 from ctf.ctf_client.serverless_lib.exceptions import ServerlessConfigException

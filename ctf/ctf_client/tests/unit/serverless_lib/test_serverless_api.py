@@ -3,9 +3,10 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+from unittest.mock import patch
+
 import pytest
 from ctf.ctf_client.serverless_lib.serverless_api import ServerlessApi
-from mock import patch
 
 
 @pytest.mark.parametrize(

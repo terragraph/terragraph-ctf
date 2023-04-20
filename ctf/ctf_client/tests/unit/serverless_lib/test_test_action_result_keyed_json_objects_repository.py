@@ -5,6 +5,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+from unittest.mock import call, mock
+
 import pytest
 from ctf.ctf_client.serverless_lib.exceptions import (
     DuplicateResourceException,
@@ -16,7 +18,6 @@ from ctf.ctf_client.serverless_lib.test_action_result_keyed_json_objects_reposit
     KEYED_JSON_OBJECTS_INDEX_PATH,
     TestActionResultKeyedJsonObjectsRepository,
 )
-from mock import call, mock
 
 TestActionResultKeyedJsonObjectsRepository.__test__ = False
 
